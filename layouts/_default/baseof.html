@@ -32,6 +32,11 @@
     <meta name="google-site-verification" content="{{ .Site.Params.seo.googleSiteVerification }}">
     {{ end }}
     
+    <!-- Google AdSense Account -->
+    {{ if .Site.Params.adsense.enabled }}
+    <meta name="google-adsense-account" content="{{ .Site.Params.adsense.clientId }}">
+    {{ end }}
+    
     <!-- Favicon -->
     <link rel="icon" href="{{ .Site.Params.favicon | default "/favicon.ico" }}">
     
