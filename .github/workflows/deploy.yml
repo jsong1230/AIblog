@@ -35,4 +35,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           cname: ${{ secrets.CUSTOM_DOMAIN }}
+          enable_jekyll: false
 
