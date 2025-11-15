@@ -1,0 +1,75 @@
+baseURL: 'https://your-blog-domain.com'
+languageCode: 'ko'
+title: 'AI 자동 블로그'
+theme: 'hugo-theme-stack'
+copyright: '© 2024 AI Blogger'
+enableRobotsTXT: true
+enableGitInfo: false
+enableEmoji: true
+enableInlineShortcodes: true
+enableMissingTranslationPlaceholders: false
+
+params:
+  env: production
+  description: 'AI가 자동으로 생성하는 블로그'
+  author: 'AI Blogger'
+  defaultTheme: auto
+  mainSections:
+    - post
+  featuredImageField: image
+  math: false
+  rssFullContent: true
+  dateFormat: '2006-01-02'
+  favicon: 'favicon.ico'
+  
+  # SEO
+  seo:
+    googleSiteVerification: ''
+    baiduSiteVerification: ''
+    bingSiteVerification: ''
+  
+  # AdSense
+  adsense:
+    enabled: true
+    clientId: ''
+    slotId: ''
+  
+  # Affiliate Links
+  affiliate:
+    amazon:
+      enabled: true
+      tag: ''
+    aliexpress:
+      enabled: true
+      id: ''
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: github
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    noClasses: false
+
+taxonomies:
+  category: categories
+  tag: tags
+
+menu:
+  main:
+    - identifier: home
+      name: 홈
+      url: /
+      weight: 1
+    - identifier: categories
+      name: 카테고리
+      url: /categories/
+      weight: 2
+    - identifier: tags
+      name: 태그
+      url: /tags/
+      weight: 3
+

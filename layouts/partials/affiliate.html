@@ -1,0 +1,16 @@
+{{ if .Site.Params.affiliate.amazon.enabled }}
+<!-- Amazon Affiliate -->
+<div class="affiliate-links">
+  <h3>추천 제품</h3>
+  <p>아래 링크를 통해 구매하시면 소정의 수수료가 발생할 수 있습니다.</p>
+  
+  {{ if .Site.Params.affiliate.amazon.tag }}
+  <p>아마존 제휴 링크: <a href="https://amzn.to/{{ .Site.Params.affiliate.amazon.tag }}" rel="nofollow sponsored">아마존 쇼핑하기</a></p>
+  {{ end }}
+  
+  {{ if .Site.Params.affiliate.aliexpress.enabled }}
+  <p>알리익스프레스 제휴 링크: <a href="https://s.click.aliexpress.com/e/{{ .Site.Params.affiliate.aliexpress.id }}" rel="nofollow sponsored">알리익스프레스 쇼핑하기</a></p>
+  {{ end }}
+</div>
+{{ end }}
+

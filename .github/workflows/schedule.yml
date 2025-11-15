@@ -1,0 +1,66 @@
+name: Scheduled Post Generation & Deploy
+
+on:
+  schedule:
+    # 매일 한국시간 자정 (UTC 15:00)
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      
+      - name: Generate posts
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          BLOG_TITLE: ${{ secrets.BLOG_TITLE || 'AI 자동 블로그' }}
+          BLOG_DESCRIPTION: ${{ secrets.BLOG_DESCRIPTION || 'AI가 자동으로 생성하는 블로그' }}
+          BLOG_URL: ${{ secrets.BLOG_URL }}
+          POSTS_PER_DAY: ${{ secrets.POSTS_PER_DAY || '10' }}
+          CONTENT_LANGUAGE: ${{ secrets.CONTENT_LANGUAGE || 'ko' }}
+          AUTO_BUILD: 'true'
+          AUTO_DEPLOY: 'false'
+        run: |
+          python3 auto_publish.py
+      
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+      
+      - name: Build Hugo site
+        run: hugo --minify
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git diff --staged --quiet || git commit -m "Auto: 새 포스트 생성 및 빌드 - $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          cname: ${{ secrets.CUSTOM_DOMAIN }}
+
