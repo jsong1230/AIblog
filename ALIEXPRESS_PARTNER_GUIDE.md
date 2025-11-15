@@ -17,19 +17,27 @@
 ### 2단계: 대시보드에서 ID 확인
 로그인 후 다음 위치에서 ID를 확인할 수 있습니다:
 
-#### 방법 A: 대시보드 홈
-1. 로그인 후 대시보드 메인 페이지
-2. 우측 상단 또는 프로필 영역에서 ID 확인
-3. "Affiliate ID", "Partner ID", "Tracking ID" 등으로 표시
+#### 방법 A: Income Report에서 확인 (가장 쉬운 방법)
+1. 왼쪽 사이드바 → "Reports" → "Income Report" 클릭
+2. 상단 필터에서 "All tracking IDs" 드롭다운 클릭
+3. 드롭다운 목록에서 본인의 Tracking ID 확인
+   - 보통 숫자로 된 ID (예: `12345678`)
+   - 또는 영문+숫자 조합
+4. 이 ID가 파트너 ID입니다!
 
-#### 방법 B: 계정 설정
-1. 대시보드 → "Account" 또는 "계정" 메뉴
-2. "Account Settings" 또는 "계정 설정"
-3. "Affiliate Information" 섹션에서 ID 확인
+#### 방법 B: Code Center에서 확인
+1. 왼쪽 사이드바 → "Code Center" 클릭
+2. 링크 생성 시 URL에 포함된 ID 확인
+3. 예: `https://s.click.aliexpress.com/e/XXXXXXXX` 에서 `XXXXXXXX` 부분
 
-#### 방법 C: 제휴 링크 생성
-1. 대시보드 → "Get Links" 또는 "링크 생성"
-2. 제품 링크 생성 시 URL 확인:
+#### 방법 C: Account 메뉴에서 확인
+1. 왼쪽 사이드바 → "Account" 클릭
+2. 계정 정보에서 "Tracking ID" 또는 "Affiliate ID" 확인
+
+#### 방법 D: 제휴 링크 생성
+1. 왼쪽 사이드바 → "Code Center" 또는 "Ad Center" 클릭
+2. 제품 링크 생성
+3. 생성된 링크 URL에서 ID 확인:
    ```
    https://s.click.aliexpress.com/e/XXXXXXXX
    ```
