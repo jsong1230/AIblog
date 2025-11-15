@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-blog-domain.com/sitemap.xml
+# Google AdSense crawler
+User-agent: Mediapartners-Google
+Allow: /
+
+Sitemap: https://jsong1230.github.io/AIblog/sitemap.xml
 
