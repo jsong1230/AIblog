@@ -1,7 +1,7 @@
 baseURL: 'https://your-blog-domain.com'
 languageCode: 'ko'
 title: 'AI 자동 블로그'
-theme: 'hugo-theme-stack'
+# theme: 'hugo-theme-stack'  # 커스텀 레이아웃 사용
 copyright: '© 2024 AI Blogger'
 enableRobotsTXT: true
 enableGitInfo: false
