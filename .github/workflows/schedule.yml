@@ -10,7 +10,7 @@ jobs:
   generate-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pages: write
       id-token: write
     environment:
@@ -22,6 +22,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
       
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -61,7 +62,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git add .
           git diff --staged --quiet || git commit -m "Auto: 새 포스트 생성 및 빌드 - $(date +'%Y-%m-%d %H:%M:%S')"
-          git push
+          git push origin main
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
