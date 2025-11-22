@@ -44,12 +44,12 @@
     {{ end }}
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ .Site.Params.favicon | default " /favicon.ico" }}">
+    <link rel="icon" href="{{ .Site.Params.favicon | default "/favicon.ico" }}">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ " css/main.css" | absURL }}?v={{ now.Unix }}">
+    <link rel="stylesheet" href="{{ "css/main.css" | absURL }}?v={{ now.Unix }}">
     {{ if .IsHome }}
-    <link rel="stylesheet" href="{{ " css/homepage.css" | absURL }}?v={{ now.Unix }}">
+    <link rel="stylesheet" href="{{ "css/homepage.css" | absURL }}?v={{ now.Unix }}">
     {{ end }}
 
     <!-- Google AdSense -->
@@ -95,7 +95,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="{{ " js/main.js" | absURL }}"></script>
+    <script src="{{ "js/main.js" | absURL }}"></script>
 
     <!-- Cookie Consent -->
     {{ partial "cookie-consent.html" . }}
