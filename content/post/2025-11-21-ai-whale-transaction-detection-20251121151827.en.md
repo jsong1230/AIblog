@@ -4,19 +4,19 @@ author: AI Blogger
 categories:
 
   - Finance
-    date: '2025-11-21T15:18:27+09:00'
-    description: '\# AI Whale Transaction Detection: Innovative Method to Capture Market Change Signals. In financial markets, whale transactions refer to the impact on the market through large-scale transactions by investors with large capital. These transactions often act as important factors determining market direction, and detecting them early can be a very important strategy for investors. In this article, we cover AI Whale Transaction Detection...'
-    draft: false
-    image: https://images.unsplash.com/photo-1617613161673-e7a273d1848a?crop=entropy\&cs=tinysrgb\&fit=max\&fm=jpg\&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHxBSSUyMCVFQSVCMyVBMCVFQiU5RSU5OCVFQSVCMSVCMCVFQiU5RSU5OCUyMCVFQSVCMCU5MCVFQyVBNyU4MHxlbnwwfDB8fHwxNzYzNzM4MzA3fDA\&ixlib=rb-4.1.0\&q=80\&w=1080
-    seo:
-    description: '\# AI Whale Transaction Detection: Innovative Method to Capture Market Change Signals. In financial markets, whale transactions refer to the impact on the market through large-scale transactions by investors with large capital. These transactions often act as important factors determining market direction, and detecting them early can be a very important strategy for investors.'
-    keywords: AI Whale Transaction Detection
-    tags:
+date: '2025-11-21T15:18:27+09:00'
+description: '\# AI Whale Transaction Detection: Innovative Method to Capture Market Change Signals. In financial markets, whale transactions refer to the impact on the market through large-scale transactions by investors with large capital. These transactions often act as important factors determining market direction, and detecting them early can be a very important strategy for investors. In this article, we cover AI Whale Transaction Detection...'
+draft: false
+image: https://images.unsplash.com/photo-1617613161673-e7a273d1848a?crop=entropy\&cs=tinysrgb\&fit=max\&fm=jpg\&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHxBSSUyMCVFQSVCMyVBMCVFQiU5RSU5OCVFQSVCMSVCMCVFQiU5RSU5OCUyMCVFQSVCMCU5MCVFQyVBNyU4MHxlbnwwfDB8fHwxNzYzNzM4MzA3fDA\&ixlib=rb-4.1.0\&q=80\&w=1080
+seo:
+description: '\# AI Whale Transaction Detection: Innovative Method to Capture Market Change Signals. In financial markets, whale transactions refer to the impact on the market through large-scale transactions by investors with large capital. These transactions often act as important factors determining market direction, and detecting them early can be a very important strategy for investors.'
+keywords: AI Whale Transaction Detection
+tags:
   - AI Whale Transaction Detection
   - AI
   - Automation
-    thumbnail: https://images.unsplash.com/photo-1617613161673-e7a273d1848a?crop=entropy\&cs=tinysrgb\&fit=max\&fm=jpg\&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHxBSSUyMCVFQSVCMyVBMCVFQiU5RSU5OCVFQSVCMSVCMCVFQiU5RSU5OCUyMCVFQSVCMCU5MCVFQyVBNyU4MHxlbnwwfDB8fHwxNzYzNzM4MzA3fDA\&ixlib=rb-4.1.0\&q=80\&w=200
-    title: 'AI Whale Transaction Detection: Innovative Method to Capture Market Change Signals'
+thumbnail: https://images.unsplash.com/photo-1617613161673-e7a273d1848a?crop=entropy\&cs=tinysrgb\&fit=max\&fm=jpg\&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHxBSSUyMCVFQSVCMyVBMCVFQiU5RSU5OCVFQSVCMSVCMCVFQiU5RSU5OCUyMCVFQSVCMCU5MCVFQyVBNyU4MHxlbnwwfDB8fHwxNzYzNzM4MzA3fDA\&ixlib=rb-4.1.0\&q=80\&w=200
+title: 'AI Whale Transaction Detection: Innovative Method to Capture Market Change Signals'
 
 ---
 

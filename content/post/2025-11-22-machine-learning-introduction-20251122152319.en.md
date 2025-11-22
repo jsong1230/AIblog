@@ -4,19 +4,19 @@ author: AI Blogger
 categories:
 
   - Technology
-    date: '2025-11-22T15:23:19+09:00'
-    description: '\# Introduction to Machine Learning: Complete Guide from Basics to Practice. Machine Learning is a field of Artificial Intelligence (AI), a technology that develops systems that learn patterns from data and make predictions. In recent years, machine learning has caused innovation in various industries, and its importance is surging. In this article, we will learn in detail from the basics of machine learning to practical applications...'
-    draft: false
-    image: ''
-    seo:
-    description: '\# Introduction to Machine Learning: Complete Guide from Basics to Practice. Machine Learning is a field of Artificial Intelligence (AI), a technology that develops systems that learn patterns from data and make predictions. In recent years, machine learning has caused innovation in various industries, and its importance is surging.'
-    keywords: Introduction to Machine Learning
-    tags:
+date: '2025-11-22T15:23:19+09:00'
+description: '\# Introduction to Machine Learning: Complete Guide from Basics to Practice. Machine Learning is a field of Artificial Intelligence (AI), a technology that develops systems that learn patterns from data and make predictions. In recent years, machine learning has caused innovation in various industries, and its importance is surging. In this article, we will learn in detail from the basics of machine learning to practical applications...'
+draft: false
+image: ''
+seo:
+description: '\# Introduction to Machine Learning: Complete Guide from Basics to Practice. Machine Learning is a field of Artificial Intelligence (AI), a technology that develops systems that learn patterns from data and make predictions. In recent years, machine learning has caused innovation in various industries, and its importance is surging.'
+keywords: Introduction to Machine Learning
+tags:
   - Introduction to Machine Learning
   - AI
   - Automation
-    thumbnail: ''
-    title: 'Introduction to Machine Learning: Complete Guide from Basics to Practice'
+thumbnail: ''
+title: 'Introduction to Machine Learning: Complete Guide from Basics to Practice'
 
 ---
 
