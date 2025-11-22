@@ -33,15 +33,15 @@ languages:
       main:
         - identifier: home
           name: Home
-          url: /
+          url: /en/
           weight: 1
         - identifier: categories
           name: Categories
-          url: /categories/
+          url: /en/categories/
           weight: 2
         - identifier: tags
           name: Tags
-          url: /tags/
+          url: /en/tags/
           weight: 3
 
 enableRobotsTXT: true
