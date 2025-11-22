@@ -188,6 +188,29 @@ AIblog/
 - Hugo Extended 버전 설치 확인
 - `config.yaml` 문법 확인
 
+### 마크다운이 포스트 설명에 표시되는 경우
+- `fix_existing_posts.py` 스크립트 실행:
+  ```bash
+  python fix_existing_posts.py
+  ```
+- 새 포스트는 자동으로 마크다운이 제거됩니다
+
+### 포스트 이미지가 너무 큰 경우
+- `static/css/main.css`에서 `.post-image` 스타일 확인
+- `max-height` 값 조정 (기본값: 400px)
+
+### 영문 네비게이션 404 오류
+- 현재 알려진 이슈: Hugo multilingual URL 구조 문제
+- 임시 해결책: 영문 사이트는 `/AIblog/en/`에서 접근 가능
+
+## 🛠️ 유틸리티 스크립트
+
+### fix_existing_posts.py
+기존 포스트의 frontmatter에서 마크다운 문법을 제거하는 스크립트:
+```bash
+python fix_existing_posts.py
+```
+
 ## 📝 라이선스
 
 MIT License
