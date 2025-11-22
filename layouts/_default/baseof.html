@@ -47,9 +47,9 @@
     <link rel="icon" href="{{ .Site.Params.favicon | default " /favicon.ico" }}">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ " css/style.css" | relURL }}">
+    <link rel="stylesheet" href="{{ " css/style.css" | absURL }}">
     {{ if .IsHome }}
-    <link rel="stylesheet" href="{{ " css/home.css" | relURL }}">
+    <link rel="stylesheet" href="{{ " css/home.css" | absURL }}">
     {{ end }}
 
     <!-- Google AdSense -->
