@@ -152,6 +152,46 @@ def extract_title_from_content(content):
     return "새로운 블로그 포스트"
 
 
+def strip_markdown_for_description(text):
+    """마크다운 문법을 제거하고 plain text로 변환"""
+    import re
+    # Remove markdown headers (# ## ###)
+    text = re.sub(r'^#{1,6}\s+', '', text, flags=re.MULTILINE)
+    # Remove markdown links [text](url) -> text
+    text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
+    # Remove markdown bold/italic **text** or *text* -> text
+    text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)
+    text = re.sub(r'\*([^*]+)\*', r'\1', text)
+    # Remove code blocks ```
+    text = re.sub(r'```[^`]*```', '', text, flags=re.DOTALL)
+    # Remove inline code `code`
+    text = re.sub(r'`([^`]+)`', r'\1', text)
+    # Clean up multiple spaces and newlines
+    text = ' '.join(text.split())
+    return text.strip()
+
+
+def remove_duplicate_h1_from_content(content, title):
+    """콘텐츠에서 중복된 H1 헤더 제거 (제목과 동일한 경우)"""
+    lines = content.split('\n')
+    result_lines = []
+    skip_next_empty = False
+    
+    for line in lines:
+        # If line is H1 header matching the title, skip it
+        if line.startswith('# ') and line[2:].strip() == title:
+            skip_next_empty = True
+            continue
+        # Skip one empty line after removed H1
+        if skip_next_empty and line.strip() == '':
+            skip_next_empty = False
+            continue
+        skip_next_empty = False
+        result_lines.append(line)
+    
+    return '\n'.join(result_lines)
+
+
 def create_post_file(keyword, content, image_info=None, lang='ko', original_filename=None):
     """Hugo 포스트 파일 생성"""
     title = extract_title_from_content(content)
@@ -188,8 +228,14 @@ def create_post_file(keyword, content, image_info=None, lang='ko', original_file
     
     categories = [keyword_data.get('카테고리', '일반')] if keyword_data else ["AI", "자동화"]
     
+    # Remove duplicate H1 header from content
+    content_cleaned = remove_duplicate_h1_from_content(content, title)
+    
+    # Create plain text description without markdown
+    plain_description = strip_markdown_for_description(content_cleaned)
+    
     # Front matter 생성
-    post = frontmatter.Post(content)
+    post = frontmatter.Post(content_cleaned)
     post.metadata = {
         "title": title,
         "date": datetime.now().strftime("%Y-%m-%dT%H:%M:%S+09:00"),
@@ -198,11 +244,11 @@ def create_post_file(keyword, content, image_info=None, lang='ko', original_file
         "tags": [keyword, "AI", "자동화"],
         "image": image_url,
         "thumbnail": image_thumb,
-        "description": content[:200].replace('\n', ' ') + "...",
+        "description": plain_description[:200] + "...",
         "author": "AI Blogger",
         "seo": {
             "keywords": keyword,
-            "description": content[:160].replace('\n', ' ')
+            "description": plain_description[:160]
         }
     }
     
