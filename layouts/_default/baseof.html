@@ -56,9 +56,9 @@
     {{ end }}
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css?v={{ now.Unix }}">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css?v={{ now.Unix }}">
     {{ if .IsHome }}
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/homepage.css?v={{ now.Unix }}">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/homepage.css?v={{ now.Unix }}">
     {{ end }}
 
     <!-- Google AdSense -->
@@ -104,7 +104,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="{{ .Site.BaseURL }}js/main.js"></script>
+    <script src="{{ .Site.BaseURL }}/js/main.js"></script>
 
     <!-- Cookie Consent -->
     {{ partial "cookie-consent.html" . }}
