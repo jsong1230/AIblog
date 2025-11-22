@@ -1,6 +1,39 @@
 # Project History
 
-## 2025-11-23
+## 2025-11-23 (오늘 작업)
+
+### CSS 스타일링 문제 해결
+- **Issue**: 한글/영문 사이트 모두에서 CSS가 적용되지 않아 텍스트만 표시됨
+- **Root Cause**: CSS/JS 파일 경로에 공백이 있어 경로가 잘못 생성됨 (`{{ " css/main.css" }}` → 잘못된 경로)
+- **Solution**: 
+  - CSS/JS 경로에서 공백 제거 (`{{ "/css/main.css" | absURL }}`)
+  - 최종적으로 `.Site.BaseURL`을 직접 사용하여 명시적 경로 설정
+  - 언어별 폰트 추가 (한글: Noto Sans KR, 영문: Inter)
+- **Files Modified**: 
+  - `layouts/_default/baseof.html`
+  - `static/css/main.css`
+- **Commits**:
+  - `fa5635e` - "Fix: Remove spaces from CSS/JS paths to fix styling issues"
+  - `e018ac9` - "Fix: Use explicit BaseURL for CSS/JS to ensure correct paths"
+  - `4a2026b` - "Fix: Add slash between BaseURL and CSS/JS paths"
+
+### 영어 사이트 네비게이션 링크 수정
+- **Issue**: 영어 사이트(`/AIblog/en/`)에서 Home, Categories, Tags 링크가 올바르게 작동하지 않음
+- **Solution**: 
+  - 영어 메뉴 URL을 상대 경로로 설정 (`en/`, `en/categories/`, `en/tags/`)
+  - 메뉴 링크에 `absLangURL` 사용하여 baseURL과 올바르게 결합
+- **Files Modified**:
+  - `config.yaml`
+  - `layouts/_default/baseof.html`
+- **Commits**:
+  - `59c4d87` - "Fix: Set explicit /en/ paths for English menu URLs"
+  - `a1d062f` - "Fix: Use absLangURL for menu links to properly handle multilingual URLs"
+
+### 키워드 CSV 업데이트
+- **Action**: `keywords.csv` 파일 업데이트 후 GitHub에 푸시
+- **Commit**: `b4554de` - "Update keywords.csv"
+
+## 2025-11-23 (이전 작업)
 
 ### Post Image Display Fix
 - **Issue**: Header images in posts were displayed at full size, taking up entire viewport and pushing text below the fold
