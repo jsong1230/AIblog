@@ -1,6 +1,7 @@
 baseURL: 'https://jsong1230.github.io/AIblog'
 # languageCode: 'ko' # Replaced by languages section
 defaultContentLanguage: ko
+defaultContentLanguageInSubdir: false
 
 languages:
   ko:
