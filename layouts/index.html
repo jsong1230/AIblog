@@ -6,10 +6,10 @@
             <p>{{ .Site.Params.description }}</p>
         </div>
     </section>
-    
+
     <section class="posts">
         <div class="container">
-            <h2>최신 포스트</h2>
+            <h2>{{ i18n "latest_posts" }}</h2>
             <div class="post-list">
                 {{ range where .Site.RegularPages "Type" "post" }}
                 <article class="post-card">
@@ -21,7 +21,7 @@
                             <h3>{{ .Title }}</h3>
                             <p class="post-excerpt">{{ .Description | default (truncate 150 .Summary) }}</p>
                             <div class="post-meta">
-                                <time>{{ .Date.Format "2006년 1월 2일" }}</time>
+                                <time>{{ .Date.Format (i18n "date_format") }}</time>
                                 {{ if .Params.categories }}
                                 <span class="category">{{ index .Params.categories 0 }}</span>
                                 {{ end }}
@@ -35,4 +35,3 @@
     </section>
 </div>
 {{ end }}
-

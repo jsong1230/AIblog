@@ -5,7 +5,9 @@
     - [x] Pull latest changes from GitHub
     - [x] Create TODO.md
     - [x] Create HISTORY.md
-    - [ ] Verify environment consistency
+    - [x] Verify environment consistency
+    - [x] Implement multilingual support (Korean/English)
+
 
 ## Backlog
 - [ ] Review and update README.md if necessary

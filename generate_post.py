@@ -88,6 +88,26 @@ def generate_post_content(keyword):
         return None
 
 
+def translate_content(content, target_language="English"):
+    """콘텐츠를 영어로 번역"""
+    system_prompt = f"You are a professional translator. Translate the following markdown blog post to {target_language}. Maintain the original markdown formatting, links, and structure. Do not translate code blocks."
+    
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": content}
+            ],
+            temperature=0.3,
+            max_tokens=2000,
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        print(f"Translation Error: {e}")
+        return None
+
+
 def get_unsplash_image(keyword):
     """Unsplash API에서 키워드 관련 이미지 가져오기"""
     if not UNSPLASH_ACCESS_KEY:
@@ -132,15 +152,27 @@ def extract_title_from_content(content):
     return "새로운 블로그 포스트"
 
 
-def create_post_file(keyword, content, image_info=None):
+def create_post_file(keyword, content, image_info=None, lang='ko', original_filename=None):
     """Hugo 포스트 파일 생성"""
     title = extract_title_from_content(content)
-    slug = keyword.lower().replace(' ', '-').replace('_', '-')
-    slug = ''.join(c for c in slug if c.isalnum() or c == '-')
     
-    # 중복 방지를 위해 타임스탬프 추가
-    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-    filename = f"{datetime.now().strftime('%Y-%m-%d')}-{slug}-{timestamp}.md"
+    if lang == 'ko':
+        slug = keyword.lower().replace(' ', '-').replace('_', '-')
+        slug = ''.join(c for c in slug if c.isalnum() or c == '-')
+        timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+        filename = f"{datetime.now().strftime('%Y-%m-%d')}-{slug}-{timestamp}.md"
+    else:
+        # English version uses the same filename base but with .en.md extension
+        if original_filename:
+            base_name = original_filename.replace('.md', '')
+            filename = f"{base_name}.en.md"
+        else:
+            # Fallback if original filename is not provided (shouldn't happen in this flow)
+            slug = keyword.lower().replace(' ', '-').replace('_', '-')
+            slug = ''.join(c for c in slug if c.isalnum() or c == '-')
+            timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+            filename = f"{datetime.now().strftime('%Y-%m-%d')}-{slug}-{timestamp}.en.md"
+
     filepath = CONTENT_DIR / filename
     
     # 이미지 URL 설정
@@ -176,14 +208,15 @@ def create_post_file(keyword, content, image_info=None):
     
     # 이미지 정보가 있으면 크레딧 추가
     if image_info:
-        post.content = f"![{image_info['description']}]({image_url})\n\n*이미지 출처: [Unsplash - {image_info['author']}]({image_info['author_url']})*\n\n" + post.content
+        credit_text = f"\n\n*이미지 출처: [Unsplash - {image_info['author']}]({image_info['author_url']})*\n\n" if lang == 'ko' else f"\n\n*Image Credit: [Unsplash - {image_info['author']}]({image_info['author_url']})*\n\n"
+        post.content = f"![{image_info['description']}]({image_url})" + credit_text + post.content
     
     # 파일 저장
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(frontmatter.dumps(post))
     
-    print(f"✅ 포스트 생성 완료: {filepath}")
-    return filepath
+    print(f"✅ 포스트 생성 완료 ({lang}): {filepath}")
+    return filename
 
 
 def generate_post():
@@ -194,11 +227,11 @@ def generate_post():
     keyword = generate_keyword()
     print(f"📝 키워드: {keyword}")
     
-    # 콘텐츠 생성
-    print("🤖 ChatGPT로 콘텐츠 생성 중...")
-    content = generate_post_content(keyword)
+    # 콘텐츠 생성 (한국어)
+    print("🤖 ChatGPT로 콘텐츠 생성 중 (한국어)...")
+    content_ko = generate_post_content(keyword)
     
-    if not content:
+    if not content_ko:
         print("❌ 콘텐츠 생성 실패")
         return None
     
@@ -206,15 +239,24 @@ def generate_post():
     print("🖼️  Unsplash에서 이미지 가져오는 중...")
     image_info = get_unsplash_image(keyword)
     
-    # 포스트 파일 생성
-    print("📄 포스트 파일 생성 중...")
-    filepath = create_post_file(keyword, content, image_info)
+    # 한국어 포스트 파일 생성
+    print("📄 한국어 포스트 파일 생성 중...")
+    filename_ko = create_post_file(keyword, content_ko, image_info, lang='ko')
     
+    # 영어 번역 및 생성
+    print("🇺🇸 영어로 번역 중...")
+    content_en = translate_content(content_ko)
+    if content_en:
+        print("📄 영어 포스트 파일 생성 중...")
+        create_post_file(keyword, content_en, image_info, lang='en', original_filename=filename_ko)
+    else:
+        print("⚠️ 영어 번역 실패")
+
     # 키워드를 사용됨으로 표시
     keyword_manager.mark_keyword_as_used(keyword)
     
-    print(f"✨ 완료! 포스트가 생성되었습니다: {filepath}")
-    return filepath
+    print(f"✨ 완료! 모든 작업이 끝났습니다.")
+    return filename_ko
 
 
 if __name__ == "__main__":
