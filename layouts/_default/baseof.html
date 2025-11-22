@@ -64,7 +64,7 @@
     <header>
         <nav>
             <div class="container">
-                <a href="{{ .Site.Home.Permalink }}" class="logo">{{ .Site.Title }}</a>
+                <a href="{{ "/" | relLangURL }}" class="logo">{{ .Site.Title }}</a>
                 <ul class="nav-menu">
                     {{ range .Site.Menus.main }}
                     <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
