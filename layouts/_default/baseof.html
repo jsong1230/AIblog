@@ -64,10 +64,10 @@
     <header>
         <nav>
             <div class="container">
-                <a href="{{ " /" | relURL }}" class="logo">{{ .Site.Title }}</a>
+                <a href="{{ .Site.Home.Permalink }}" class="logo">{{ .Site.Title }}</a>
                 <ul class="nav-menu">
                     {{ range .Site.Menus.main }}
-                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                     {{ end }}
 
                     <!-- Language Switcher -->
@@ -95,7 +95,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="{{ " js/main.js" | relURL }}"></script>
+    <script src="{{ " js/main.js" | absURL }}"></script>
 
     <!-- Cookie Consent -->
     {{ partial "cookie-consent.html" . }}
