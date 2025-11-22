@@ -1,4 +1,4 @@
------
+---
 
 author: AI Blogger
 categories:
@@ -18,7 +18,7 @@ categories:
     thumbnail: [https://images.unsplash.com/photo-1668508120171-90fdcac2c022?crop=entropy\&cs=tinysrgb\&fit=max\&fm=jpg\&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHwlRUMlOTglQTglRUIlOUQlQkMlRUMlOUQlQjglMjAlRUElQjAlOTUlRUMlOUQlOTglMjAlRUMlQjYlOTQlRUMlQjIlOUN8ZW58MHwwfHx8MTc2MzU2NjA1M3ww\&ixlib=rb-4.1.0\&q=80\&w=200](https://images.unsplash.com/photo-1668508120171-90fdcac2c022?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHwlRUMlOTglQTglRUIlOUQlQkMlRUMlOUQlQjglMjAlRUElQjAlOTUlRUMlOUQlOTglMjAlRUMlQjYlOTQlRUMlQjIlOUN8ZW58MHwwfHx8MTc2MzU2NjA1M3ww&ixlib=rb-4.1.0&q=80&w=200)
     title: 'Online Course Recommendations: Essential Guide for Effective Learning'
 
------
+---
 
 *Image Source: [Unsplash - Gaurav Kumar](https://unsplash.com/@countingframez)*
 

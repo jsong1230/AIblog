@@ -1,4 +1,4 @@
------
+---
 
 author: AI Blogger
 categories:
@@ -18,7 +18,7 @@ categories:
     thumbnail: ''
     title: 'AI Short-form Auto-generation: Leading Innovation in Content Creation'
 
------
+---
 
 # AI Short-form Auto-generation: Leading Innovation in Content Creation
 

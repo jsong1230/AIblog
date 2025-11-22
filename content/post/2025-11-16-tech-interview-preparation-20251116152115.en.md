@@ -1,4 +1,4 @@
------
+---
 
 author: AI Blogger
 categories:
@@ -18,7 +18,7 @@ categories:
     thumbnail: ''
     title: 'Tech Interview Preparation: The Complete Guide for a Successful Interview'
 
------
+---
 
 # Tech Interview Preparation: The Complete Guide for a Successful Interview
 

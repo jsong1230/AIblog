@@ -1,4 +1,4 @@
------
+---
 
 author: AI Blogger
 categories:
@@ -18,7 +18,7 @@ categories:
     thumbnail: https://www.google.com/search?q=https://images.unsplash.com/photo-1632293869317-d38e1e25a120%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3w4MzA5MjF8MHwxfHNlYXJjaHwxfHwlRUMlOTglQTQlRUQlOTQlODglRUMlODYlOEMlRUMlOEElQTQlMjAlRUElQjglQjAlRUMlOTclQACJRUQlOTUlOTglRUElQjglQjB8ZW58MHwwfHx8MTc2MzMwNjM2NXww%26ixlib%3Drb-4.1.0%26q%3D80%26w%3D200
     title: 'Contributing to Open Source: Growth as a Developer and Community Participation'
 
------
+---
 
 *Image Source: [Unsplash - latikan CC](https://unsplash.com/@lalalati)*
 

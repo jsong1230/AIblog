@@ -1,4 +1,4 @@
------
+---
 
 author: AI Blogger
 categories:
@@ -18,7 +18,7 @@ categories:
     thumbnail: ''
     title: 'AI Revenue Automation Examples: How Artificial Intelligence Innovates Revenue Generation'
 
------
+---
 
 # AI Revenue Automation Examples: How Artificial Intelligence Innovates Revenue Generation
 

@@ -1,4 +1,4 @@
------
+---
 
 author: AI Blogger
 categories:
@@ -18,7 +18,7 @@ categories:
     thumbnail: ''
     title: 'Understanding Blockchain: Explaining Innovative Technology Simply'
 
------
+---
 
 # Understanding Blockchain: Explaining Innovative Technology Simply
 

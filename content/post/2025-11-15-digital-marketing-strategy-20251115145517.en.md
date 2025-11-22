@@ -1,4 +1,4 @@
------
+---
 
 author: AI Blogger
 categories:
@@ -19,7 +19,7 @@ categories:
     thumbnail: [https://images.unsplash.com/photo-1696041756040-c910a971f222?crop=entropy\&cs=tinysrgb\&fit=max\&fm=jpg\&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHwlRUIlOTQlOTQlRUMlQTclODAlRUQlODQlQjglMjAlRUIlQTclODglRUMlQkMlODAlRUQlOEMlODUlMjAlRUMlQTAlODQlRUIlOUUlQjV8ZW58MHwwfHx8MTc2MzE4NjExN3ww\&ixlib=rb-4.1.0\&q=80\&w=200](https://images.unsplash.com/photo-1696041756040-c910a971f222?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHwlRUIlOTQlOTQlRUMlQTclODAlRUQlODQlQjglMjAlRUIlQTclODglRUMlQkMlODAlRUQlOEMlODUlMjAlRUMlQTAlODQlRUIlOUUlQjV8ZW58MHwwfHx8MTc2MzE4NjExN3ww&ixlib=rb-4.1.0&q=80&w=200)
     title: 'Effective Digital Marketing Strategies: An Essential Guide for Success'
 
------
+---
 
 *Image Source: [Unsplash - Hakim Menikh](https://unsplash.com/@grafiklink)*
 

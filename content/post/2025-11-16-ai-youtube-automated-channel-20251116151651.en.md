@@ -1,4 +1,4 @@
------
+---
 
 author: AI Blogger
 categories:
@@ -18,7 +18,7 @@ categories:
     thumbnail: [https://images.unsplash.com/photo-1694878982098-1cec80d96eca?crop=entropy\&cs=tinysrgb\&fit=max\&fm=jpg\&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHxBSSUyMCVFQSVCMyVBMCVFQiU5RSU5OCVFQSVCMSVCMCVFQiU5RSU5OCUyMCVFQSVCMCU5MCVFQyVBNyU4MHxlbnwwfDB8fHwxNzYzMzA2MjExfDA\&ixlib=rb-4.1.0\&q=80\&w=200](https://www.google.com/search?q=https://images.unsplash.com/photo-1694878982098-1cec80d96eca%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3w4MzA5MjF8MHwxfHNlYXJjaHwxfHxBSSUyMCVFQSVCMyVBMCVFQiU5RSU5OCVFQSVCMSVCMCVFQiU5RSU5OCUyMCVFQSVCMCU5MCVFQyVBNyU4MHxlbnwwfDB8fHwxNzYzMzA2MjExfDA%26ixlib%3Drb-4.1.0%26q%3D80%26w%3D200)
     title: 'AI YouTube Automated Channel: A Guide to Successful YouTube Operations Starting Easily'
 
------
+---
 
 *Image Source: [Unsplash - Kelly Sikkema](https://unsplash.com/@kellysikkema)*
 

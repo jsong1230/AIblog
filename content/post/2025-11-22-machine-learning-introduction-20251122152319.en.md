@@ -1,4 +1,4 @@
------
+---
 
 author: AI Blogger
 categories:
@@ -18,7 +18,7 @@ categories:
     thumbnail: ''
     title: 'Introduction to Machine Learning: Complete Guide from Basics to Practice'
 
------
+---
 
 # Introduction to Machine Learning: Complete Guide from Basics to Practice
 

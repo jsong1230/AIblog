@@ -1,4 +1,4 @@
------
+---
 
 author: AI Blogger
 categories:
@@ -18,7 +18,7 @@ categories:
     thumbnail: ''
     title: 'AI Automated Revenue Roadmap: How to Generate Revenue with Artificial Intelligence'
 
------
+---
 
 # AI Automated Revenue Roadmap: How to Generate Revenue with Artificial Intelligence
 

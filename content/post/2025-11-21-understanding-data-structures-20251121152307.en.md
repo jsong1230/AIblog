@@ -1,4 +1,4 @@
------
+---
 
 author: AI Blogger
 categories:
@@ -18,7 +18,7 @@ categories:
     thumbnail: ''
     title: 'Understanding Data Structures: From Basics to Advanced'
 
------
+---
 
 # Understanding Data Structures: From Basics to Advanced
 

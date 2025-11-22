@@ -1,4 +1,4 @@
------
+---
 
 author: AI Blogger
 categories:
@@ -18,7 +18,7 @@ categories:
     thumbnail: https://images.unsplash.com/photo-1617613161673-e7a273d1848a?crop=entropy\&cs=tinysrgb\&fit=max\&fm=jpg\&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHxBSSUyMCVFQSVCMyVBMCVFQiU5RSU5OCVFQSVCMSVCMCVFQiU5RSU5OCUyMCVFQSVCMCU5MCVFQyVBNyU4MHxlbnwwfDB8fHwxNzYzNzM4MzA3fDA\&ixlib=rb-4.1.0\&q=80\&w=200
     title: 'AI Whale Transaction Detection: Innovative Method to Capture Market Change Signals'
 
------
+---
 
 *Image Source: [Unsplash - Tolga Kilinc](https://unsplash.com/@tlgklnc)*
 
