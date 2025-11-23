@@ -17,12 +17,14 @@
                 {{ end }}
                 <div class="post-card-content">
                     <h3>{{ .Title }}</h3>
-                    <p class="post-excerpt">{{ .Description | default (truncate 150 (.Summary | replaceRE "^#{1,6}\\s+" "" | replaceRE "\\n" " ")) }}</p>
+                    <p class="post-excerpt">{{ (.Description | replaceRE "\\\\?#{1,6}\\s*" "" | replaceRE "\\n" " " | default (truncate 150 (.Summary | replaceRE "^#{1,6}\\s+" "" | replaceRE "\\n" " "))) | plainify }}</p>
                     <div class="post-meta">
                         <time>
                             {{ if eq .Site.LanguageCode "en" }}
-                                {{ $dayWithSuffix := partial "ordinal-date.html" .Date }}
-                                {{ printf "%s %s, %d" (.Date.Format "Jan") $dayWithSuffix (.Date.Year) }}
+                                {{ $day := .Date.Day }}
+                                {{ $suffix := "th" }}
+                                {{ if or (eq $day 1) (eq $day 21) (eq $day 31) }}{{ $suffix = "st" }}{{ else if or (eq $day 2) (eq $day 22) }}{{ $suffix = "nd" }}{{ else if or (eq $day 3) (eq $day 23) }}{{ $suffix = "rd" }}{{ end }}
+                                {{ printf "%s %d%s, %d" (.Date.Format "Jan") $day $suffix (.Date.Year) }}
                             {{ else }}
                                 {{ .Date.Format (i18n "date_format") }}
                             {{ end }}
