@@ -240,7 +240,40 @@ def create_post_file(keyword, content, image_info=None, lang='ko', original_file
             keyword_data = kw
             break
     
-    categories = [keyword_data.get('카테고리', '일반')] if keyword_data else ["AI", "자동화"]
+    # 카테고리 한글->영어 매핑
+    category_mapping = {
+        '수익': 'Revenue',
+        '기술': 'Technology',
+        '금융': 'Finance',
+        '커리어': 'Career',
+        '교육': 'Education',
+        '생산성': 'Productivity',
+        '건강': 'Health',
+        '여행': 'Travel',
+        '비즈니스': 'Business',
+        '마케팅': 'Marketing',
+        '블록체인': 'Blockchain',
+        '디자인': 'Design',
+        'AI': 'AI',
+        '일반': 'General',
+        '라이프': 'Lifestyle',
+        '심리': 'Psychology',
+        '경제': 'Economy',
+        '생활': 'Lifestyle',
+        '요리': 'Cooking',
+    }
+    
+    if keyword_data:
+        category_ko = keyword_data.get('카테고리', '일반')
+        if lang == 'en':
+            categories = [category_mapping.get(category_ko, category_ko)]
+        else:
+            categories = [category_ko]
+    else:
+        if lang == 'en':
+            categories = ["AI", "Automation"]
+        else:
+            categories = ["AI", "자동화"]
     
     # Remove duplicate H1 header from content
     content_cleaned = remove_duplicate_h1_from_content(content, title)
@@ -250,12 +283,19 @@ def create_post_file(keyword, content, image_info=None, lang='ko', original_file
     
     # Front matter 생성
     post = frontmatter.Post(content_cleaned)
+    
+    # 태그 설정 (언어에 따라)
+    if lang == 'en':
+        tags = [keyword, "AI", "Automation"]
+    else:
+        tags = [keyword, "AI", "자동화"]
+    
     post.metadata = {
         "title": title,
         "date": datetime.now().strftime("%Y-%m-%dT%H:%M:%S+09:00"),
         "draft": False,
         "categories": categories,
-        "tags": [keyword, "AI", "자동화"],
+        "tags": tags,
         "image": image_url,
         "thumbnail": image_thumb,
         "description": plain_description[:200] + "...",
