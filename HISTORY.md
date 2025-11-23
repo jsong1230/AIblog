@@ -1,6 +1,29 @@
 # Project History
 
-## 2025-11-23 (오늘 작업)
+## 2025-11-23 (오늘 작업 - 후반)
+
+### 다국어 날짜 포맷 및 UI 수정
+- **Issue**: 영문 사이트에서 날짜가 한글로 표시되고, 로고 링크가 잘못된 경로로 이동
+- **Solution**:
+  - 로고 링크를 언어별로 명시적 경로 설정 (`/AIblog/` 또는 `/AIblog/en/`)
+  - 영문 사이트 날짜 포맷을 서수 형식으로 변경 ("Nov 22nd, 2025")
+  - Summary에서 마크다운 헤더(`#`) 제거
+  - 모든 페이지(메인, Categories, Tags, 포스트 상세)에 언어별 날짜 포맷 적용
+- **Files Modified**:
+  - `layouts/_default/baseof.html`
+  - `layouts/index.html`
+  - `layouts/_default/list.html`
+  - `layouts/taxonomy/term.html`
+  - `layouts/taxonomy/list.html`
+  - `layouts/_default/single.html`
+- **Commits**:
+  - `323e5dc` - "Fix: Update logo links, date formats, and remove markdown headers from summaries"
+  - `6b405d1` - "Fix: Correct logo links, date formats, and markdown removal in summaries"
+  - `920ab15` - "Fix: Use .Language.Lang instead of .Site.LanguageCode for date format detection"
+  - `c48d741` - "Fix: Use $ to access parent context language in date format"
+  - `03aa1de` - "Fix: Apply language-specific date format to single post pages"
+
+## 2025-11-23 (오늘 작업 - 전반)
 
 ### CSS 스타일링 문제 해결
 - **Issue**: 한글/영문 사이트 모두에서 CSS가 적용되지 않아 텍스트만 표시됨

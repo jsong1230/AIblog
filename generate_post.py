@@ -52,9 +52,25 @@ def generate_keyword():
     return keyword
 
 
-def generate_post_content(keyword):
+def generate_post_content(keyword, lang='ko'):
     """ChatGPT API를 사용하여 블로그 포스트 생성"""
-    system_prompt = f"""당신은 전문 블로그 작가입니다. SEO에 최적화된 고품질 블로그 포스트를 작성해주세요.
+    if lang == 'en':
+        system_prompt = f"""You are a professional blog writer. Write high-quality, SEO-optimized blog posts.
+
+Requirements:
+1. Title should be SEO-friendly and attractive
+2. At least 1500 characters of detailed content
+3. Use subheadings (H2, H3) appropriately
+4. Provide valuable information to readers
+5. Natural keyword placement
+6. Write in markdown format
+7. Write in English
+
+Keyword: {keyword}
+"""
+        user_prompt = f"Write an SEO-optimized blog post about '{keyword}'. Include title, body, and conclusion. Write a complete, high-quality article."
+    else:
+        system_prompt = f"""당신은 전문 블로그 작가입니다. SEO에 최적화된 고품질 블로그 포스트를 작성해주세요.
 
 요구사항:
 1. 제목은 SEO 친화적이고 매력적이어야 합니다
@@ -67,8 +83,7 @@ def generate_post_content(keyword):
 
 키워드: {keyword}
 """
-
-    user_prompt = f"'{keyword}'에 대한 SEO 최적화된 블로그 포스트를 작성해주세요. 제목, 본문, 결론을 포함하여 완성도 높은 글을 작성해주세요."
+        user_prompt = f"'{keyword}'에 대한 SEO 최적화된 블로그 포스트를 작성해주세요. 제목, 본문, 결론을 포함하여 완성도 높은 글을 작성해주세요."
 
     try:
         response = client.chat.completions.create(
@@ -266,42 +281,52 @@ def create_post_file(keyword, content, image_info=None, lang='ko', original_file
 
 
 def generate_post():
-    """포스트 생성 메인 함수"""
+    """포스트 생성 메인 함수 - 한글과 영어 모두 생성"""
     print("🚀 블로그 포스트 생성 시작...")
     
     # 키워드 생성
     keyword = generate_keyword()
     print(f"📝 키워드: {keyword}")
     
-    # 콘텐츠 생성 (한국어)
-    print("🤖 ChatGPT로 콘텐츠 생성 중 (한국어)...")
-    content_ko = generate_post_content(keyword)
-    
-    if not content_ko:
-        print("❌ 콘텐츠 생성 실패")
-        return None
-    
-    # 이미지 가져오기
+    # 이미지 가져오기 (양쪽 언어에서 공통 사용)
     print("🖼️  Unsplash에서 이미지 가져오는 중...")
     image_info = get_unsplash_image(keyword)
+    
+    # 한국어 콘텐츠 생성
+    print("🤖 ChatGPT로 콘텐츠 생성 중 (한국어)...")
+    content_ko = generate_post_content(keyword, lang='ko')
+    
+    if not content_ko:
+        print("❌ 한국어 콘텐츠 생성 실패")
+        return None
     
     # 한국어 포스트 파일 생성
     print("📄 한국어 포스트 파일 생성 중...")
     filename_ko = create_post_file(keyword, content_ko, image_info, lang='ko')
     
-    # 영어 번역 및 생성
-    print("🇺🇸 영어로 번역 중...")
-    content_en = translate_content(content_ko)
+    # 영어 콘텐츠 생성 (번역이 아닌 직접 생성)
+    print("🇺🇸 ChatGPT로 콘텐츠 생성 중 (영어)...")
+    content_en = generate_post_content(keyword, lang='en')
+    
     if content_en:
         print("📄 영어 포스트 파일 생성 중...")
         create_post_file(keyword, content_en, image_info, lang='en', original_filename=filename_ko)
+        print("✅ 영어 포스트 생성 완료!")
     else:
-        print("⚠️ 영어 번역 실패")
+        print("⚠️ 영어 콘텐츠 생성 실패, 번역으로 대체 시도...")
+        # 번역으로 대체 시도
+        content_en = translate_content(content_ko)
+        if content_en:
+            print("📄 영어 포스트 파일 생성 중 (번역본)...")
+            create_post_file(keyword, content_en, image_info, lang='en', original_filename=filename_ko)
+            print("✅ 영어 포스트 생성 완료 (번역본)!")
+        else:
+            print("❌ 영어 포스트 생성 실패")
 
     # 키워드를 사용됨으로 표시
     keyword_manager.mark_keyword_as_used(keyword)
     
-    print(f"✨ 완료! 모든 작업이 끝났습니다.")
+    print(f"✨ 완료! 한글과 영어 포스트가 모두 생성되었습니다.")
     return filename_ko
 
 
