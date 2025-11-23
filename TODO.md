@@ -1,16 +1,9 @@
 # Project TODOs
 
 ## In Progress
-- [ ] Mobile Responsive Design Implementation
-    - [ ] Implement mobile hamburger menu
-    - [ ] Optimize post card grid for mobile (single column)
-    - [ ] Add tablet breakpoint (768px-1024px)
-    - [ ] Add small mobile breakpoint (480px and below)
-    - [ ] Optimize navigation bar for mobile
-    - [ ] Test and refine mobile experience
+- 현재 진행 중인 작업 없음
 
 ## Backlog
-- [ ] Review and optimize CSS for mobile devices
 - [ ] Add more keywords to keywords.csv
 - [ ] Implement automated testing for post generation
 - [ ] Add analytics tracking
