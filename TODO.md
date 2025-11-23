@@ -1,9 +1,7 @@
 # Project TODOs
 
 ## In Progress
-- [ ] Fix English navigation URL structure
-    - Issue: English navigation links use `/en/AIblog/` instead of `/AIblog/en/`
-    - Need to investigate Hugo multilingual URL configuration
+- 현재 진행 중인 작업 없음
 
 ## Backlog
 - [ ] Review and optimize CSS for mobile devices
@@ -27,4 +25,15 @@
     - [x] Removed duplicate H1 headers from post content
 - [x] Fix Navigation Issues (2025-11-23)
     - [x] Fixed Korean menu URLs
-    - [x] Attempted to fix English navigation (partial - still has URL structure issue)
+    - [x] Fixed English navigation URL structure
+    - [x] Fixed logo links to use correct paths (/AIblog/ and /AIblog/en/)
+- [x] Multilingual Date Format & UI Fixes (2025-11-23)
+    - [x] Fixed logo links for both Korean and English sites
+    - [x] Implemented English ordinal date format (Nov 22nd, 2025)
+    - [x] Removed markdown headers (#) from post summaries
+    - [x] Applied language-specific date formats to all pages (index, categories, tags, single)
+    - [x] Fixed date format detection using $.Language.Lang in range loops
+- [x] Bilingual Posting Setup (2025-11-23)
+    - [x] Modified generate_post() to generate English content directly (not just translate)
+    - [x] Ensured both Korean and English posts are always created
+    - [x] Added fallback to translation if direct English generation fails
