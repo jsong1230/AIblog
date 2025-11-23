@@ -77,9 +77,9 @@ params:
   
   # Analytics
   analytics:
-    enabled: false
+    enabled: true
     provider: 'google'  # 'google' or 'plausible'
-    googleId: ''  # Google Analytics Measurement ID (G-XXXXXXXXXX)
+    googleId: 'G-E8EV0XPYJH'  # Google Analytics Measurement ID (G-XXXXXXXXXX)
     plausibleDomain: ''  # Plausible domain (if using Plausible)
   
   # Affiliate Links
