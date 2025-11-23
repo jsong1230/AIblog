@@ -17,9 +17,16 @@
                 {{ end }}
                 <div class="post-card-content">
                     <h3>{{ .Title }}</h3>
-                    <p class="post-excerpt">{{ .Description | default (truncate 150 .Summary) }}</p>
+                    <p class="post-excerpt">{{ .Description | default (truncate 150 (.Summary | replaceRE "^#{1,6}\\s+" "" | replaceRE "\\n" " ")) }}</p>
                     <div class="post-meta">
-                        <time>{{ .Date.Format "2006년 1월 2일" }}</time>
+                        <time>
+                            {{ if eq .Site.LanguageCode "en" }}
+                                {{ $dayWithSuffix := partial "ordinal-date.html" .Date }}
+                                {{ printf "%s %s, %d" (.Date.Format "Jan") $dayWithSuffix (.Date.Year) }}
+                            {{ else }}
+                                {{ .Date.Format (i18n "date_format") }}
+                            {{ end }}
+                        </time>
                         {{ if .Params.categories }}
                         <span class="category">{{ index .Params.categories 0 }}</span>
                         {{ end }}
