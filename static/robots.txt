@@ -1,9 +1,23 @@
 User-agent: *
 Allow: /
+Allow: /en/
+Disallow: /aiblog/  # 소문자 리다이렉트 경로 (크롤링 불필요)
 
 # Google AdSense crawler
 User-agent: Mediapartners-Google
 Allow: /
+Allow: /en/
+
+# Googlebot (검색 엔진)
+User-agent: Googlebot
+Allow: /
+Allow: /en/
+Crawl-delay: 1
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Allow: /en/
+Crawl-delay: 1
 
 Sitemap: https://jsong1230.github.io/AIblog/sitemap.xml
-
