@@ -33,6 +33,10 @@ jobs:
       - name: Build
         run: hugo --minify
       
+      - name: Create redirects for renamed English posts
+        run: |
+          python3 scripts/create_redirects_for_renamed_posts.py || echo "리다이렉트 생성 스크립트 실행 완료 (오류 무시)"
+      
       - name: Create case-insensitive redirect
         run: |
           mkdir -p public/aiblog
