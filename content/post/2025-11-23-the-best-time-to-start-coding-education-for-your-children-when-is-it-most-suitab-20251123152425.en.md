@@ -14,9 +14,9 @@ seo:
   description: 'As coding education is receiving increasing attention, many parents
     want to teach their children coding. But when is the optimal time to start coding
     education '
-  keywords: 자녀 코딩 교육 시작하는 최적 시기
+  keywords: The Best Time to Start Coding Education for Children
 tags:
-- 자녀 코딩 교육 시작하는 최적 시기
+- The Best Time to Start Coding Education for Your Children
 - AI
 - Automation
 thumbnail: https://images.unsplash.com/photo-1625889944911-5e6e9d2d4c28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHwlRUMlOUUlOTAlRUIlODUlODAlMjAlRUMlQkQlOTQlRUIlOTQlQTklMjAlRUElQjUlOTAlRUMlOUMlQTElMjAlRUMlOEIlOUMlRUMlOUUlOTElRUQlOTUlOTglRUIlOEElOTQlMjAlRUMlQjUlOUMlRUMlQTAlODElMjAlRUMlOEIlOUMlRUElQjglQjB8ZW58MHwwfHx8MTc2MzkxMTQzOXww&ixlib=rb-4.1.0&q=80&w=200

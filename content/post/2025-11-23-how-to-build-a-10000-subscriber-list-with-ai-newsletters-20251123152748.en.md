@@ -12,9 +12,9 @@ seo:
   description: In the age of digital communication, newsletters are an indispensable
     tool for businesses and content creators looking to engage with their audience.
     With the r
-  keywords: AI 뉴스레터로 구독자 1만명 모으기
+  keywords: Gathering 10,000 Subscribers with an AI Newsletter
 tags:
-- AI 뉴스레터로 구독자 1만명 모으기
+- Gathering 10,000 Subscribers with an AI Newsletter
 - AI
 - Automation
 thumbnail: https://images.unsplash.com/photo-1611500732238-78447b05c240?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHxBSSUyMCVFQiU4OSVCNCVFQyU4QSVBNCVFQiVBMCU4OCVFRCU4NCVCMCVFQiVBMSU5QyUyMCVFQSVCNSVBQyVFQiU4RiU4NSVFQyU5RSU5MCUyMDElRUIlQTclOEMlRUIlQUElODUlMjAlRUIlQUElQTglRUMlOUMlQkMlRUElQjglQjB8ZW58MHwwfHx8MTc2MzkxMTY1Nnww&ixlib=rb-4.1.0&q=80&w=200

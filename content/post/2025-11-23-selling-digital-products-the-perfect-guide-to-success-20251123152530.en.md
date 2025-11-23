@@ -14,9 +14,9 @@ seo:
 
     Digital product sales have rapidly grown into a booming industry over the past
     few years. Due to changes in business models a'
-  keywords: 디지털 제품 판매
+  keywords: Selling Digital Products
 tags:
-- 디지털 제품 판매
+- Selling Digital Products
 - AI
 - Automation
 thumbnail: https://images.unsplash.com/photo-1608461111675-7bb43edcbac3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHwlRUIlOTQlOTQlRUMlQTclODAlRUQlODQlQjglMjAlRUMlQTAlOUMlRUQlOTIlODglMjAlRUQlOEMlOTAlRUIlQTclQTR8ZW58MHwwfHx8MTc2MzkxMTUxNnww&ixlib=rb-4.1.0&q=80&w=200

@@ -12,9 +12,9 @@ seo:
   description: In today's digital landscape, having a strong social media presence
     is more critical than ever. With millions of users across various platforms, the
     potential f
-  keywords: 소셜 미디어 전략으로 팔로워 10배 늘리기
+  keywords: Growing Your Followers 10x with a Social Media Strategy
 tags:
-- 소셜 미디어 전략으로 팔로워 10배 늘리기
+- Growing Your Followers 10x with a Social Media Strategy
 - AI
 - Automation
 thumbnail: https://images.unsplash.com/photo-1712331676372-2fc48f449c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHwlRUMlODYlOEMlRUMlODUlOUMlMjAlRUIlQUYlQjglRUIlOTQlOTQlRUMlOTYlQjQlMjAlRUMlQTAlODQlRUIlOUUlQjUlRUMlOUMlQkMlRUIlQTElOUMlMjAlRUQlOEMlOTQlRUIlQTElOUMlRUMlOUIlOEMlMjAxMCVFQiVCMCVCMCUyMCVFQiU4QSU5OCVFQiVBNiVBQyVFQSVCOCVCMHxlbnwwfDB8fHwxNzYzOTExOTM5fDA&ixlib=rb-4.1.0&q=80&w=200

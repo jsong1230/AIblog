@@ -5,16 +5,16 @@ categories:
 date: '2025-11-23T15:29:28+09:00'
 description: Refactoring is an essential practice in software development that focuses
   on improving the structure and readability of existing code without altering its
-  functionality. The term "리팩토링 기법" (refactorin...
+  functionality. The term "refactoring techniqu...
 draft: false
 image: ''
 seo:
   description: Refactoring is an essential practice in software development that focuses
     on improving the structure and readability of existing code without altering its
     funct
-  keywords: 리팩토링 기법
+  keywords: Refactoring Techniques
 tags:
-- 리팩토링 기법
+- Refactoring Techniques
 - AI
 - Automation
 thumbnail: ''

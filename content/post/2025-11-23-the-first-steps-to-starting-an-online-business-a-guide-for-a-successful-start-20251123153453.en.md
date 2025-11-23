@@ -12,9 +12,9 @@ seo:
   description: Starting an online business is a dream for many, but the first step
     is always the most important. In this article, we will take a detailed look at
     the first ste
-  keywords: 온라인 비즈니스 시작하는 첫 단계
+  keywords: The First Steps to Starting an Online Business
 tags:
-- 온라인 비즈니스 시작하는 첫 단계
+- The First Steps to Starting an Online Business
 - AI
 - Automation
 thumbnail: https://images.unsplash.com/photo-1673515335188-79a859a375fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHwlRUMlOTglQTglRUIlOUQlQkMlRUMlOUQlQjglMjAlRUIlQjklODQlRUMlQTYlODglRUIlOEIlODglRUMlOEElQTQlMjAlRUMlOEIlOUMlRUMlOUUlOTElRUQlOTUlOTglRUIlOEElOTQlMjAlRUMlQjIlQUIlMjAlRUIlOEIlQTglRUElQjMlODR8ZW58MHwwfHx8MTc2MzkxMjA2OXww&ixlib=rb-4.1.0&q=80&w=200

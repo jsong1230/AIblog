@@ -12,9 +12,9 @@ seo:
   description: As the use of mobile devices increases, the importance of mobile UI/UX
     design is growing even more. User Experience (UX) and User Interface (UI) have
     a signific
-  keywords: 모바일 UI/UX 디자인 핵심 원칙
+  keywords: Key Principles of Mobile UI/UX Design
 tags:
-- 모바일 UI/UX 디자인 핵심 원칙
+- Core Principles of Mobile UI/UX Design
 - AI
 - Automation
 thumbnail: https://images.unsplash.com/photo-1598668724808-d08ede183e5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHwlRUIlQUElQTglRUIlQjAlOTQlRUMlOUQlQkMlMjBVSSUyRlVYJTIwJUVCJTk0JTk0JUVDJTlFJTkwJUVDJTlEJUI4JTIwJUVEJTk1JUI1JUVDJThCJUFDJTIwJUVDJTlCJTkwJUVDJUI5JTk5fGVufDB8MHx8fDE3NjM5MTE1NzZ8MA&ixlib=rb-4.1.0&q=80&w=200

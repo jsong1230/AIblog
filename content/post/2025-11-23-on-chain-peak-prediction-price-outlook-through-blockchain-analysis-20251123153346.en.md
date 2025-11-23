@@ -12,9 +12,9 @@ seo:
   description: In the rapidly evolving world of cryptocurrencies, understanding market
     trends and predicting price movements can be daunting tasks. One of the most effective
     w
-  keywords: 온체인 고점 예측
+  keywords: On-Chain Price Prediction
 tags:
-- 온체인 고점 예측
+- On-Chain Peak Prediction
 - AI
 - Automation
 thumbnail: ''
