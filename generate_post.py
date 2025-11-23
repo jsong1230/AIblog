@@ -83,8 +83,6 @@ Keyword: {keyword}
 
 키워드: {keyword}
 """
-        user_prompt = f"'{keyword}'에 대한 SEO 최적화된 블로그 포스트를 작성해주세요. 제목, 본문, 결론을 포함하여 완성도 높은 글을 작성해주세요."
-
     try:
         response = client.chat.completions.create(
             model="gpt-4o-mini",

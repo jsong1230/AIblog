@@ -268,18 +268,214 @@ footer {
     color: var(--text-secondary);
 }
 
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* Responsive */
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+    
+    .post-list {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .post {
+        padding: 2rem;
+    }
+}
+
+/* Mobile (768px and below) */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    nav .container {
+        height: 4rem;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
     .nav-menu {
-        display: none; /* Mobile menu implementation needed */
+        position: fixed;
+        top: 4rem;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+    }
+    
+    .nav-menu a {
+        display: block;
+        padding: 0.75rem 0;
+        font-size: 1rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+    
+    .language-switcher {
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        padding-left: 0;
+        padding-top: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    .post-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .post {
         padding: 1.5rem;
         margin: 1.5rem auto;
+        border-radius: 1rem;
     }
     
     .post-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .post-content {
+        font-size: 1rem;
+    }
+    
+    .post-content h2 {
+        font-size: 1.5rem;
+        margin: 2rem 0 1rem;
+    }
+    
+    .hero {
+        padding: 3rem 0;
+    }
+    
+    .hero h1 {
         font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .posts {
+        padding: 2rem 0;
+    }
+    
+    .posts h2 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .logo {
+        font-size: 1.25rem;
+    }
+    
+    .post {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+    
+    .post-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .post-card-content {
+        padding: 1rem;
+    }
+    
+    .post-card h3 {
+        font-size: 1.125rem;
+    }
+    
+    .post-thumbnail {
+        height: 180px;
+    }
+    
+    .hero {
+        padding: 2.5rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero p {
+        font-size: 0.95rem;
+    }
+    
+    .posts h2 {
+        font-size: 1.5rem;
+    }
+    
+    footer {
+        padding: 2rem 0;
+        font-size: 0.9rem;
     }
 }
