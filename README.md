@@ -159,6 +159,12 @@ AIblog/
 
 제휴 링크는 포스트 하단에 자동으로 표시됩니다.
 
+## 📊 Analytics 설정
+
+방문자 통계를 추적하려면 Analytics를 설정하세요:
+
+- **[Analytics 설정 가이드](./ANALYTICS_SETUP.md)** - Google Analytics 및 Plausible Analytics 설정 방법
+
 ## 🔒 법적 고려사항
 
 - AI 생성 콘텐츠임을 명시 (선택사항)
