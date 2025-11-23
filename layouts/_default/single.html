@@ -3,7 +3,16 @@
     <header class="post-header">
         <h1>{{ .Title }}</h1>
         <div class="post-meta">
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006년 1월 2일" }}</time>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">
+                {{ if eq .Language.Lang "en" }}
+                    {{ $day := .Date.Day }}
+                    {{ $suffix := "th" }}
+                    {{ if or (eq $day 1) (eq $day 21) (eq $day 31) }}{{ $suffix = "st" }}{{ else if or (eq $day 2) (eq $day 22) }}{{ $suffix = "nd" }}{{ else if or (eq $day 3) (eq $day 23) }}{{ $suffix = "rd" }}{{ end }}
+                    {{ printf "%s %d%s, %d" (.Date.Format "Jan") $day $suffix (.Date.Year) }}
+                {{ else }}
+                    {{ .Date.Format (i18n "date_format") }}
+                {{ end }}
+            </time>
             <span class="author">{{ .Params.author | default .Site.Params.author }}</span>
             {{ if .Params.categories }}
             <div class="categories">
