@@ -216,16 +216,23 @@ def create_post_file(keyword, content, image_info=None, lang='ko', original_file
         timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
         filename = f"{datetime.now().strftime('%Y-%m-%d')}-{slug}-{timestamp}.md"
     else:
-        # English version uses the same filename base but with .en.md extension
-        if original_filename:
-            base_name = original_filename.replace('.md', '')
-            filename = f"{base_name}.en.md"
-        else:
-            # Fallback if original filename is not provided (shouldn't happen in this flow)
-            slug = keyword.lower().replace(' ', '-').replace('_', '-')
-            slug = ''.join(c for c in slug if c.isalnum() or c == '-')
-            timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-            filename = f"{datetime.now().strftime('%Y-%m-%d')}-{slug}-{timestamp}.en.md"
+        # English version: create slug from English title, not from Korean filename
+        # Extract title and create slug from it
+        english_title = title.strip()
+        # Remove markdown headers if present
+        english_title = english_title.replace('#', '').strip()
+        # Create slug from English title
+        slug = english_title.lower()
+        # Replace spaces and special characters with hyphens
+        slug = ''.join(c if c.isalnum() or c == '-' or c == ' ' else '' for c in slug)
+        slug = slug.replace(' ', '-').replace('--', '-')
+        # Remove leading/trailing hyphens
+        slug = slug.strip('-')
+        # Limit slug length (keep it reasonable for filenames)
+        if len(slug) > 80:
+            slug = slug[:80].rstrip('-')
+        timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+        filename = f"{datetime.now().strftime('%Y-%m-%d')}-{slug}-{timestamp}.en.md"
 
     filepath = CONTENT_DIR / filename
     
