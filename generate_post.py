@@ -55,6 +55,29 @@ def generate_keyword():
 def generate_post_content(keyword, lang='ko'):
     """ChatGPT API를 사용하여 블로그 포스트 생성"""
     if lang == 'en':
+        # 영어 포스트 생성 시: 한글 키워드를 영어로 번역하거나 영어 설명으로 변환
+        # 키워드가 한글인 경우 영어로 번역
+        import re
+        korean_pattern = re.compile(r'[가-힣]+')
+        if korean_pattern.search(keyword):
+            # 한글 키워드를 영어로 번역
+            try:
+                response = client.chat.completions.create(
+                    model="gpt-4o-mini",
+                    messages=[
+                        {"role": "system", "content": "You are a translator. Translate Korean keywords to English. Return only the English translation, no explanations."},
+                        {"role": "user", "content": f"Translate this Korean keyword to English: {keyword}"}
+                    ],
+                    temperature=0.3,
+                    max_tokens=50,
+                )
+                english_keyword = response.choices[0].message.content.strip()
+            except:
+                # 번역 실패 시 원본 키워드 사용 (ChatGPT가 자동으로 처리)
+                english_keyword = keyword
+        else:
+            english_keyword = keyword
+        
         system_prompt = f"""You are a professional blog writer. Write high-quality, SEO-optimized blog posts.
 
 Requirements:
@@ -64,11 +87,12 @@ Requirements:
 4. Provide valuable information to readers
 5. Natural keyword placement
 6. Write in markdown format
-7. Write in English
+7. Write in English ONLY - do not include any Korean text
+8. All section headings must be in English
 
-Keyword: {keyword}
+Topic: {english_keyword}
 """
-        user_prompt = f"Write an SEO-optimized blog post about '{keyword}'. Include title, body, and conclusion. Write a complete, high-quality article."
+        user_prompt = f"Write an SEO-optimized blog post about '{english_keyword}'. Include title, body, and conclusion. Write a complete, high-quality article in English. Do not include any Korean text."
     else:
         system_prompt = f"""당신은 전문 블로그 작가입니다. SEO에 최적화된 고품질 블로그 포스트를 작성해주세요.
 
@@ -293,9 +317,17 @@ def create_post_file(keyword, content, image_info=None, lang='ko', original_file
     
     # 태그 설정 (언어에 따라)
     if lang == 'en':
-        tags = [keyword, "AI", "Automation"]
+        # 영어 포스트: 영어 제목을 태그로 사용 (한글 키워드 대신)
+        # 제목에서 주요 키워드 추출 또는 제목 자체를 사용
+        english_tag = title.strip().replace('#', '').split(':')[0].strip()  # 콜론 앞부분만 사용
+        if len(english_tag) > 50:  # 너무 길면 앞부분만
+            english_tag = english_tag[:50]
+        tags = [english_tag, "AI", "Automation"]
+        # SEO keywords도 영어 제목 기반으로 설정
+        seo_keywords = english_tag
     else:
         tags = [keyword, "AI", "자동화"]
+        seo_keywords = keyword
     
     post.metadata = {
         "title": title,
@@ -308,7 +340,7 @@ def create_post_file(keyword, content, image_info=None, lang='ko', original_file
         "description": plain_description[:200] + "...",
         "author": "AI Blogger",
         "seo": {
-            "keywords": keyword,
+            "keywords": seo_keywords,
             "description": plain_description[:160]
         }
     }
