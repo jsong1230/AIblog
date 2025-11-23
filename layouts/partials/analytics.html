@@ -1,0 +1,15 @@
+{{ if .Site.Params.analytics.enabled }}
+{{ if eq .Site.Params.analytics.provider "google" }}
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.analytics.googleId }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ .Site.Params.analytics.googleId }}');
+</script>
+{{ else if eq .Site.Params.analytics.provider "plausible" }}
+<!-- Plausible Analytics -->
+<script defer data-domain="{{ .Site.Params.analytics.plausibleDomain }}" src="https://plausible.io/js/script.js"></script>
+{{ end }}
+{{ end }}

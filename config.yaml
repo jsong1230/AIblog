@@ -75,6 +75,13 @@ params:
     clientId: 'ca-pub-5954947755126324'
     slotId: ''
   
+  # Analytics
+  analytics:
+    enabled: false
+    provider: 'google'  # 'google' or 'plausible'
+    googleId: ''  # Google Analytics Measurement ID (G-XXXXXXXXXX)
+    plausibleDomain: ''  # Plausible domain (if using Plausible)
+  
   # Affiliate Links
   affiliate:
     amazon:
