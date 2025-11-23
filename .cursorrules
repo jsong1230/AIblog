@@ -1,0 +1,113 @@
+# Cursor Rules for AI Blog Project
+
+## 프로젝트 개요
+- Hugo 기반 다국어(한국어/영어) AI 자동 블로그 시스템
+- ChatGPT API를 사용한 자동 포스트 생성
+- GitHub Pages 자동 배포
+
+## 작업 완료 시 필수 작업
+
+### 1. TODO.md 업데이트
+작업이 완료되면 반드시 `TODO.md` 파일을 업데이트하세요:
+- 완료된 작업은 `Done` 섹션으로 이동
+- 진행 중인 작업은 `In Progress` 섹션에 상태 업데이트
+- 새로운 작업이 시작되면 `In Progress`에 추가
+
+**형식:**
+```markdown
+- [x] 작업명 (날짜)
+    - [x] 세부 작업 1
+    - [x] 세부 작업 2
+```
+
+### 2. HISTORY.md 업데이트
+중요한 작업이나 기능 추가/수정이 완료되면 `docs/HISTORY.md` 파일을 업데이트하세요:
+- 날짜별로 섹션 구분
+- Issue, Solution, Files Modified, Commits 포함
+- 커밋 해시와 함께 기록
+
+**형식:**
+```markdown
+## YYYY-MM-DD
+
+### 작업명
+- **Issue**: 문제 설명
+- **Solution**: 해결 방법 설명
+- **Files Modified**:
+  - `파일경로1`
+  - `파일경로2`
+- **Commits**:
+  - `커밋해시` - "커밋 메시지"
+```
+
+### 3. 자동 커밋 및 푸시
+작업이 완료되고 TODO.md와 HISTORY.md가 업데이트되면:
+1. 변경사항을 스테이징: `git add TODO.md docs/HISTORY.md`
+2. 의미있는 커밋 메시지로 커밋
+3. `main` 브랜치에 푸시
+
+**커밋 메시지 형식:**
+```
+작업 유형: 간단한 설명
+
+- 상세 변경사항 1
+- 상세 변경사항 2
+- TODO.md 업데이트
+- HISTORY.md 업데이트
+```
+
+**작업 유형:**
+- `Feat:` - 새 기능 추가
+- `Fix:` - 버그 수정
+- `Refactor:` - 코드 리팩토링
+- `Docs:` - 문서 업데이트
+- `Style:` - 코드 스타일 변경
+- `Chore:` - 빌드/설정 변경
+
+## 코딩 스타일
+
+### Python
+- PEP 8 준수
+- 함수와 클래스에 docstring 작성
+- 타입 힌트 사용 권장
+
+### Hugo Templates
+- Go 템플릿 문법 준수
+- 들여쓰기 일관성 유지
+- 주석으로 복잡한 로직 설명
+
+### Git
+- 의미있는 커밋 메시지 작성
+- 한 커밋에 하나의 논리적 변경사항만 포함
+- 작업 전에 `git pull`로 최신 상태 확인
+
+## 파일 구조
+
+### 주요 디렉토리
+- `content/post/` - 생성된 블로그 포스트
+- `layouts/` - Hugo 템플릿
+- `static/` - 정적 파일 (CSS, JS)
+- `docs/` - 프로젝트 문서
+- `scripts/` - 유틸리티 스크립트
+
+### 중요 파일
+- `TODO.md` - 할 일 목록
+- `docs/HISTORY.md` - 프로젝트 변경 이력
+- `config.yaml` - Hugo 설정
+- `generate_post.py` - 포스트 생성 스크립트
+
+## 다국어 지원
+- 모든 사용자 메시지는 한글로 작성
+- 코드 주석과 문서는 한글로 작성
+- Git 커밋 메시지는 한글로 작성 가능
+
+## 자동화
+- GitHub Actions로 자동 배포
+- 매일 자정 자동 포스트 생성
+- 변경사항 푸시 시 자동 빌드 및 배포
+
+## 주의사항
+- 환경 변수는 `.env` 파일에 저장 (`.gitignore`에 포함)
+- API 키는 절대 커밋하지 않기
+- `public/` 디렉토리는 빌드 결과물이므로 커밋하지 않기
+- 테스트 후 커밋하기
