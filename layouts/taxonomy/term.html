@@ -20,7 +20,7 @@
                     <p class="post-excerpt">{{ (.Description | replaceRE "\\\\?#{1,6}\\s*" "" | replaceRE "\\n" " " | default (truncate 150 (.Summary | replaceRE "^#{1,6}\\s+" "" | replaceRE "\\n" " "))) | plainify }}</p>
                     <div class="post-meta">
                         <time>
-                            {{ if eq .Site.LanguageCode "en" }}
+                            {{ if eq .Language.Lang "en" }}
                                 {{ $day := .Date.Day }}
                                 {{ $suffix := "th" }}
                                 {{ if or (eq $day 1) (eq $day 21) (eq $day 31) }}{{ $suffix = "st" }}{{ else if or (eq $day 2) (eq $day 22) }}{{ $suffix = "nd" }}{{ else if or (eq $day 3) (eq $day 23) }}{{ $suffix = "rd" }}{{ end }}
