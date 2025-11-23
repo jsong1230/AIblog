@@ -16,3 +16,8 @@ node_modules/
 .DS_Store
 *.log
 
+# 임시 키워드 파일
+keywords_viral_*.csv
+*_sample.csv
+*_converted.csv
+

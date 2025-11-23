@@ -1,10 +1,24 @@
 # Project TODOs
 
 ## In Progress
-- 현재 진행 중인 작업 없음
+- [ ] 광고 연동 완료 (AdSense, Amazon, Aliexpress)
 
 ## Backlog
 - [ ] Additional features and improvements
+- [ ] 광고 배치 최적화 및 A/B 테스트
+- [ ] 광고 성과 추적 시스템 구축
+
+## Done (Recent)
+- [x] 키워드 바이럴 개선 시스템 구축 (2025-11-23)
+    - [x] 바이럴 키워드 130개 생성 및 병합 (총 342개 키워드)
+    - [x] 키워드 바이럴 변환 스크립트 작성 (convert_to_viral.py)
+    - [x] 키워드 성과 추적 시스템 구축 (keyword_performance_tracker.py)
+    - [x] 키워드 관리 가이드 문서 작성
+- [x] 광고 연동 현황 파악 및 TODO 작성 (2025-11-23)
+    - [x] 현재 광고 시스템 코드 상태 확인
+    - [x] 설정 상태 파악 (AdSense clientId 있음, slotId 없음)
+    - [x] GitHub Secrets 상태 확인 (광고 관련 secrets 없음)
+    - [x] 광고 연동 TODO 및 가이드 문서 작성
 
 ## Done
 - [x] Project Setup & Synchronization
