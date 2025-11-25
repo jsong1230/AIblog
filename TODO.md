@@ -9,6 +9,15 @@
 - [ ] 광고 성과 추적 시스템 구축
 
 ## Done (Recent)
+- [x] 영어 포스트 태그 통합 (2025-11-26)
+    - [x] 97개 영어 포스트 중 54개 파일의 태그 주제별 통합
+    - [x] 세부 태그를 12개 주제 카테고리로 통합 (AI Automation, Development, Blockchain 등)
+    - [x] 태그 통합 스크립트 작성 (consolidate_english_tags.py)
+- [x] Cursor Rules 업데이트 (2025-11-26)
+    - [x] 커밋 전 필수 작업 규칙 강화 (TODO.md, HISTORY.md, README.md 업데이트 필수)
+    - [x] 날짜 정확 기록 규칙 추가 (YYYY-MM-DD 형식)
+    - [x] 커밋/푸시 전 사용자 승인 필수 규칙 추가
+    - [x] Git 저장소 초기화 규칙 추가 (로컬/원격 저장소 확인)
 - [x] 키워드 바이럴 개선 시스템 구축 (2025-11-23)
     - [x] 바이럴 키워드 130개 생성 및 병합 (총 342개 키워드)
     - [x] 키워드 바이럴 변환 스크립트 작성 (convert_to_viral.py)

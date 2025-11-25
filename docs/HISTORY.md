@@ -1,5 +1,39 @@
 # Project History
 
+## 2025-11-26
+
+### 영어 포스트 태그 통합
+- **Issue**: 영어 포스트의 태그가 너무 많아 관리가 어려움 (97개의 다양한 태그)
+- **Solution**: 
+  - 세부 태그를 주제별 카테고리로 통합하는 스크립트 작성 (`scripts/consolidate_english_tags.py`)
+  - 54개 영어 포스트의 태그를 12개 주제 카테고리로 통합:
+    * AI Automation (11개)
+    * Development (12개)
+    * Blockchain (11개)
+    * Online Business (6개)
+    * Learning (4개)
+    * Finance (3개)
+    * Lifestyle (3개)
+    * 기타: Design, Education, Career, Productivity
+- **Files Modified**:
+  - `scripts/consolidate_english_tags.py` (신규 생성)
+  - `content/post/*.en.md` (54개 파일)
+- **Commits**:
+  - `7c0ceff` - "Refactor: 영어 포스트 태그 주제별 통합"
+
+### Cursor Rules 업데이트
+- **Issue**: 커밋 전 필수 작업(TODO.md, HISTORY.md 업데이트)이 누락되는 경우 발생, 날짜 기록이 부정확함, 자동 커밋/푸시로 인한 문제
+- **Solution**:
+  - `.cursorrules` 파일에 커밋 전 필수 작업 규칙 강화
+  - TODO.md, HISTORY.md, README.md 업데이트를 커밋 전 필수 작업으로 명시
+  - 날짜 기록 규칙 추가 (YYYY-MM-DD 형식, 정확한 날짜 사용)
+  - 커밋/푸시 전 사용자 승인 필수 규칙 추가
+  - Git 저장소 초기화 규칙 추가 (로컬/원격 저장소 확인)
+- **Files Modified**:
+  - `.cursorrules`
+- **Commits**:
+  - (아직 커밋 전)
+
 ## 2025-11-23 (오늘 작업 - 후반)
 
 ### 다국어 날짜 포맷 및 UI 수정
