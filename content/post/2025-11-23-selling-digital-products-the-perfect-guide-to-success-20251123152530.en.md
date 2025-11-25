@@ -16,7 +16,7 @@ seo:
     few years. Due to changes in business models a'
   keywords: Selling Digital Products
 tags:
-- Selling Digital Products
+- Online Business
 - AI
 - Automation
 thumbnail: https://images.unsplash.com/photo-1608461111675-7bb43edcbac3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHwlRUIlOTQlOTQlRUMlQTclODAlRUQlODQlQjglMjAlRUMlQTAlOUMlRUQlOTIlODglMjAlRUQlOEMlOTAlRUIlQTclQTR8ZW58MHwwfHx8MTc2MzkxMTUxNnww&ixlib=rb-4.1.0&q=80&w=200

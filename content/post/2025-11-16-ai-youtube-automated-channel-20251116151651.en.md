@@ -13,7 +13,7 @@ draft: false
 image: https://www.google.com/search?q=https://images.unsplash.com/photo-1694878982098-1cec80d96eca%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3w4MzA5MjF8MHwxfHNlYXJjaHwxfHxBSSUyMCVFQSVCMyVBMCVFQiU5RSU5OCVFQSVCMSVCMCVFQiU5RSU5OCUyMCVFQSVCMCU5MCVFQyVBNyU4MHxlbnwwfDB8fHwxNzYzMzA2MjExfDA%26ixlib%3Drb-4.1.0%26q%3D80%26w%3D1080
 keywords: AI YouTube Automated Channel
 tags:
-- AI YouTube Automated Channel
+- AI Automation
 - AI
 - Automation
 thumbnail: https://www.google.com/search?q=https://images.unsplash.com/photo-1694878982098-1cec80d96eca%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3w4MzA5MjF8MHwxfHNlYXJjaHwxfHxBSSUyMCVFQSVCMyVBMCVFQiU5RSU5OCVFQSVCMSVCMCVFQiU5RSU5OCUyMCVFQSVCMCU5MCVFQyVBNyU4MHxlbnwwfDB8fHwxNzYzMzA2MjExfDA%26ixlib%3Drb-4.1.0%26q%3D80%26w%3D200

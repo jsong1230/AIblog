@@ -14,7 +14,7 @@ seo:
     suppleme
   keywords: Turning Your Side Project into a Full-Time Career
 tags:
-- Turning Your Side Project into a Full-Time Career
+- Career
 - AI
 - Automation
 thumbnail: ''

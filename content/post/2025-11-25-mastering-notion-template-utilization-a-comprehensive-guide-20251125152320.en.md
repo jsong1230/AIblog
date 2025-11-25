@@ -14,7 +14,7 @@ seo:
     In this '
   keywords: Mastering Notion Template Utilization
 tags:
-- Mastering Notion Template Utilization
+- Productivity
 - AI
 - Automation
 thumbnail: ''

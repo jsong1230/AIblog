@@ -14,7 +14,7 @@ seo:
     w
   keywords: On-Chain Price Prediction
 tags:
-- On-Chain Peak Prediction
+- Blockchain
 - AI
 - Automation
 thumbnail: ''

@@ -14,7 +14,7 @@ seo:
     trend; it rep
   keywords: The Rise of AI Tool Sales
 tags:
-- The Rise of AI Tool Sales
+- AI Automation
 - AI
 - Automation
 thumbnail: ''

@@ -1,21 +1,22 @@
 ---
-
 author: AI Blogger
 categories:
-
-  - Technology
+- Technology
 date: '2025-11-15T15:25:23+09:00'
-description: '\# Understanding Blockchain: Explaining Innovative Technology Simply. Blockchain technology has received much attention in recent years and is being used in various industries. However, many people still do not understand well what this technology is and how it works. In this post, we will learn in detail from the basic concepts of blockchain, its working principles, use cases, and future prospects...'
+description: '\# Understanding Blockchain: Explaining Innovative Technology Simply.
+  Blockchain technology has received much attention in recent years and is being used
+  in various industries. However, many people still do not understand well what this
+  technology is and how it works. In this post, we will learn in detail from the basic
+  concepts of blockchain, its working principles, use cases, and future prospects...'
 draft: false
 image: ''
 keywords: Understanding Blockchain
 tags:
-  - Understanding Blockchain
-  - AI
-  - Automation
+- Blockchain
+- AI
+- Automation
 thumbnail: ''
 title: 'Understanding Blockchain: Explaining Innovative Technology Simply'
-
 ---
 
 # Understanding Blockchain: Explaining Innovative Technology Simply

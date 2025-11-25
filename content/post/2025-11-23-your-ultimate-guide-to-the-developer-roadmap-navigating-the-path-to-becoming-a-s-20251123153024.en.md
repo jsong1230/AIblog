@@ -14,7 +14,7 @@ seo:
     understa
   keywords: Developer Roadmap
 tags:
-- Developer Roadmap
+- Development
 - AI
 - Automation
 thumbnail: https://images.unsplash.com/photo-1662974770404-468fd9660389?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHwlRUElQjAlOUMlRUIlQjAlOUMlRUMlOUUlOTAlMjAlRUIlQTElOUMlRUIlOTMlOUMlRUIlQTclQjV8ZW58MHwwfHx8MTc2MzkxMTc5OHww&ixlib=rb-4.1.0&q=80&w=200

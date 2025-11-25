@@ -16,7 +16,7 @@ seo:
     education '
   keywords: The Best Time to Start Coding Education for Children
 tags:
-- The Best Time to Start Coding Education for Your Children
+- Education
 - AI
 - Automation
 thumbnail: https://images.unsplash.com/photo-1625889944911-5e6e9d2d4c28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHwlRUMlOUUlOTAlRUIlODUlODAlMjAlRUMlQkQlOTQlRUIlOTQlQTklMjAlRUElQjUlOTAlRUMlOUMlQTElMjAlRUMlOEIlOUMlRUMlOUUlOTElRUQlOTUlOTglRUIlOEElOTQlMjAlRUMlQjUlOUMlRUMlQTAlODElMjAlRUMlOEIlOUMlRUElQjglQjB8ZW58MHwwfHx8MTc2MzkxMTQzOXww&ixlib=rb-4.1.0&q=80&w=200

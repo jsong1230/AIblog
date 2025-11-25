@@ -14,7 +14,7 @@ seo:
     wi
   keywords: 5 Essential Checklists to Avoid DeFi Risks
 tags:
-- 5 Essential Checklists to Avoid DeFi Risks
+- Blockchain
 - AI
 - Automation
 thumbnail: https://images.unsplash.com/photo-1570260919903-4c447b271b53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MzA5MjF8MHwxfHNlYXJjaHwxfHxEZUZpJTIwJUVCJUE2JUFDJUVDJThBJUE0JUVEJTgxJUFDJTIwJUVEJTk0JUJDJUVEJTk1JTk4JUVCJThBJTk0JTIwNSVFQSVCMCU4MCVFQyVBNyU4MCUyMCVFQyVCMiVCNCVFRCU4MSVBQyVFQiVBNiVBQyVFQyU4QSVBNCVFRCU4QSVCOHxlbnwwfDB8fHwxNzYzOTk4MDg1fDA&ixlib=rb-4.1.0&q=80&w=200

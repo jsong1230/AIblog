@@ -14,7 +14,7 @@ seo:
     funct
   keywords: Refactoring Techniques
 tags:
-- Refactoring Techniques
+- Development
 - AI
 - Automation
 thumbnail: ''
