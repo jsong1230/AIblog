@@ -37,8 +37,9 @@ jobs:
         run: |
           python3 scripts/create_redirects_for_renamed_posts.py || echo "리다이렉트 생성 스크립트 실행 완료 (오류 무시)"
       
-      - name: Create case-insensitive redirect
+      - name: Create case-insensitive redirects
         run: |
+          # 소문자 경로에 리다이렉트 HTML 생성
           mkdir -p public/aiblog
           cat > public/aiblog/index.html << 'EOF'
           <!DOCTYPE html>
@@ -56,6 +57,17 @@ jobs:
               </script>
           </body>
           </html>
+          EOF
+          
+          # 모든 하위 경로에 대한 리다이렉트 스크립트 생성
+          cat > public/aiblog/redirect.js << 'EOF'
+          (function() {
+              const currentPath = window.location.pathname;
+              const newPath = currentPath.replace(/^\/aiblog/i, '/AIblog');
+              if (newPath !== currentPath) {
+                  window.location.href = 'https://jsong1230.github.io' + newPath;
+              }
+          })();
           EOF
       
       - name: Setup Pages

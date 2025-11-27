@@ -9,7 +9,14 @@
 <body>
     <p>Redirecting to <a href="https://jsong1230.github.io/AIblog/">AI Blog</a>...</p>
     <script>
-        window.location.href = "https://jsong1230.github.io/AIblog/";
+        // 현재 경로를 대문자 경로로 변환
+        const currentPath = window.location.pathname;
+        const newPath = currentPath.replace(/^\/aiblog/i, '/AIblog');
+        if (newPath !== currentPath) {
+            window.location.href = 'https://jsong1230.github.io' + newPath;
+        } else {
+            window.location.href = 'https://jsong1230.github.io/AIblog/';
+        }
     </script>
 </body>
 </html>
