@@ -60,8 +60,11 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          # 원격 변경사항 먼저 가져오기
+          git fetch origin
+          git pull origin main --rebase || git pull origin main --no-rebase
           git add .
-          git diff --staged --quiet || git commit -m "Auto: 새 포스트 생성 및 빌드 - $(date +'%Y-%m-%d %H:%M:%S')"
+          git diff --staged --quiet || git commit -m "Auto: 새 포스트 생성 및 빌드 - $(TZ='Asia/Seoul' date +'%Y-%m-%d %H:%M:%S KST')"
           git push origin main
       
       - name: Setup Pages

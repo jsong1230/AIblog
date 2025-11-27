@@ -2,6 +2,17 @@
 
 ## 2025-11-28
 
+### GitHub Actions 워크플로우 푸시 오류 수정
+- **Issue**: 워크플로우가 포스트 생성 후 푸시할 때 원격 저장소에 새로운 커밋이 있어서 충돌 발생. 또한 커밋 메시지 날짜가 UTC로 표시됨
+- **Solution**: 
+  - `git push` 전에 `git fetch`와 `git pull`을 추가하여 원격 변경사항을 먼저 가져오도록 수정
+  - 커밋 메시지 날짜를 한국시간(KST)으로 표시하도록 `TZ='Asia/Seoul'` 환경변수 추가
+  - rebase 실패 시 no-rebase로 fallback 처리
+- **Files Modified**:
+  - `.github/workflows/schedule.yml`
+- **Commits**:
+  - (아직 커밋 전)
+
 ### 새로운 키워드 200개 추가
 - **Issue**: 기존 키워드가 소진될 가능성, 더 다양한 주제의 포스트 생성 필요
 - **Solution**: 
