@@ -2,6 +2,19 @@
 
 ## 2025-11-28
 
+### 포스트 생성 시 날짜를 한국시간(KST) 기준으로 수정
+- **Issue**: 포스트 생성 시 날짜가 UTC 기준으로 생성되어, 한국시간 자정에 생성된 포스트가 전날 날짜로 표시됨
+- **Solution**: 
+  - `generate_post.py`에 `get_kst_now()` 함수 추가하여 한국시간대(Asia/Seoul) 명시적 설정
+  - 파일명, 타임스탬프, frontmatter의 `date` 필드 모두 KST 기준으로 생성
+  - `auto_publish.py`의 커밋 메시지도 KST로 수정
+  - `zoneinfo` (Python 3.9+) 우선 사용, 없으면 `pytz`, 둘 다 없으면 수동 계산으로 fallback
+- **Files Modified**:
+  - `generate_post.py`
+  - `auto_publish.py`
+- **Commits**:
+  - (아직 커밋 전)
+
 ### GitHub Actions 워크플로우 푸시 오류 수정
 - **Issue**: 워크플로우가 포스트 생성 후 푸시할 때 원격 저장소에 새로운 커밋이 있어서 충돌 발생. 또한 커밋 메시지 날짜가 UTC로 표시됨
 - **Solution**: 

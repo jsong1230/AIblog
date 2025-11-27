@@ -61,7 +61,18 @@ def deploy_to_git():
         
         # 커밋
         from datetime import datetime
-        commit_message = f"Auto: 새 포스트 생성 - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        try:
+            from zoneinfo import ZoneInfo
+            KST = ZoneInfo("Asia/Seoul")
+        except ImportError:
+            try:
+                import pytz
+                KST = pytz.timezone("Asia/Seoul")
+            except ImportError:
+                from datetime import timedelta, timezone
+                KST = timezone(timedelta(hours=9))
+        now_kst = datetime.now(KST)
+        commit_message = f"Auto: 새 포스트 생성 - {now_kst.strftime('%Y-%m-%d %H:%M:%S KST')}"
         subprocess.run(
             ["git", "commit", "-m", commit_message],
             check=True

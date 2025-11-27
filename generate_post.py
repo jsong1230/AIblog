@@ -15,6 +15,24 @@ from openai import OpenAI
 import yaml
 from keyword_manager import KeywordManager
 
+# 한국시간대 설정
+try:
+    from zoneinfo import ZoneInfo
+    KST = ZoneInfo("Asia/Seoul")
+except ImportError:
+    # Python 3.8 이하에서는 pytz 사용
+    try:
+        import pytz
+        KST = pytz.timezone("Asia/Seoul")
+    except ImportError:
+        # pytz도 없으면 UTC+9로 수동 계산
+        from datetime import timedelta, timezone
+        KST = timezone(timedelta(hours=9))
+
+def get_kst_now():
+    """한국시간(KST) 기준 현재 시간 반환"""
+    return datetime.now(KST)
+
 # 환경 변수 로드
 load_dotenv()
 
@@ -237,8 +255,9 @@ def create_post_file(keyword, content, image_info=None, lang='ko', original_file
     if lang == 'ko':
         slug = keyword.lower().replace(' ', '-').replace('_', '-')
         slug = ''.join(c for c in slug if c.isalnum() or c == '-')
-        timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-        filename = f"{datetime.now().strftime('%Y-%m-%d')}-{slug}-{timestamp}.md"
+        now_kst = get_kst_now()
+        timestamp = now_kst.strftime("%Y%m%d%H%M%S")
+        filename = f"{now_kst.strftime('%Y-%m-%d')}-{slug}-{timestamp}.md"
     else:
         # English version: create slug from English title, not from Korean filename
         # Extract title and create slug from it
@@ -255,8 +274,9 @@ def create_post_file(keyword, content, image_info=None, lang='ko', original_file
         # Limit slug length (keep it reasonable for filenames)
         if len(slug) > 80:
             slug = slug[:80].rstrip('-')
-        timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-        filename = f"{datetime.now().strftime('%Y-%m-%d')}-{slug}-{timestamp}.en.md"
+        now_kst = get_kst_now()
+        timestamp = now_kst.strftime("%Y%m%d%H%M%S")
+        filename = f"{now_kst.strftime('%Y-%m-%d')}-{slug}-{timestamp}.en.md"
 
     filepath = CONTENT_DIR / filename
     
@@ -329,9 +349,10 @@ def create_post_file(keyword, content, image_info=None, lang='ko', original_file
         tags = [keyword, "AI", "자동화"]
         seo_keywords = keyword
     
+    now_kst = get_kst_now()
     post.metadata = {
         "title": title,
-        "date": datetime.now().strftime("%Y-%m-%dT%H:%M:%S+09:00"),
+        "date": now_kst.strftime("%Y-%m-%dT%H:%M:%S+09:00"),
         "draft": False,
         "categories": categories,
         "tags": tags,

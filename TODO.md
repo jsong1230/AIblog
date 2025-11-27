@@ -9,6 +9,11 @@
 - [ ] 광고 성과 추적 시스템 구축
 
 ## Done (Recent)
+- [x] 포스트 생성 시 날짜를 한국시간(KST) 기준으로 수정 (2025-11-28)
+    - [x] generate_post.py에서 datetime.now()를 get_kst_now()로 변경
+    - [x] 파일명, 타임스탬프, frontmatter 날짜 모두 KST 기준으로 생성
+    - [x] auto_publish.py 커밋 메시지도 KST로 수정
+    - [x] zoneinfo를 사용하여 한국시간대 명시적 설정
 - [x] GitHub Actions 워크플로우 푸시 오류 수정 (2025-11-28)
     - [x] git push 전 git pull 추가하여 원격 변경사항 먼저 가져오기
     - [x] 커밋 메시지 날짜를 한국시간(KST)으로 표시하도록 수정
