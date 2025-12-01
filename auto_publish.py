@@ -14,7 +14,7 @@ from keyword_manager import KeywordManager
 
 load_dotenv()
 
-POSTS_PER_RUN = int(os.getenv("POSTS_PER_DAY", "10"))
+POSTS_PER_RUN = int(os.getenv("POSTS_PER_DAY", "3"))
 AUTO_BUILD = os.getenv("AUTO_BUILD", "true").lower() == "true"
 AUTO_DEPLOY = os.getenv("AUTO_DEPLOY", "true").lower() == "true"
 

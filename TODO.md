@@ -9,6 +9,10 @@
 - [ ] 광고 성과 추적 시스템 구축
 
 ## Done (Recent)
+- [x] 하루 포스트 생성 개수 3개로 조정 (2025-12-01)
+    - [x] scheduler.py 기본값 10개 → 3개로 변경
+    - [x] auto_publish.py 기본값 10개 → 3개로 변경
+    - [x] env.example 예시 값 10개 → 3개로 변경
 - [x] 포스트 생성 시 날짜를 한국시간(KST) 기준으로 수정 (2025-11-28)
     - [x] generate_post.py에서 datetime.now()를 get_kst_now()로 변경
     - [x] 파일명, 타임스탬프, frontmatter 날짜 모두 KST 기준으로 생성

@@ -1,5 +1,21 @@
 # Project History
 
+## 2025-12-01
+
+### 하루 포스트 생성 개수 조정
+- **Issue**: 하루에 10개의 포스트를 생성하는 것이 과도함
+- **Solution**: 
+  - `scheduler.py`의 `POSTS_PER_DAY` 기본값을 10개에서 3개로 변경
+  - `auto_publish.py`의 `POSTS_PER_RUN` 기본값을 10개에서 3개로 변경
+  - `env.example`의 예시 값도 3개로 업데이트
+  - 환경 변수 `POSTS_PER_DAY`를 통해 여전히 커스터마이징 가능
+- **Files Modified**:
+  - `scheduler.py`
+  - `auto_publish.py`
+  - `env.example`
+- **Commits**:
+  - (아직 커밋 전)
+
 ## 2025-11-28
 
 ### 포스트 생성 시 날짜를 한국시간(KST) 기준으로 수정

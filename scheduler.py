@@ -13,7 +13,7 @@ from generate_post import generate_post
 
 load_dotenv()
 
-POSTS_PER_DAY = int(os.getenv("POSTS_PER_DAY", "10"))
+POSTS_PER_DAY = int(os.getenv("POSTS_PER_DAY", "3"))
 
 
 def generate_posts_batch():
