@@ -144,7 +144,13 @@ AIblog/
 │   └── workflows/     # GitHub Actions 워크플로우
 ├── generate_post.py   # 포스트 생성 스크립트
 ├── scheduler.py       # 스케줄러
+├── auto_publish.py    # 자동 발행 스크립트
 ├── deploy.py          # 배포 스크립트
+├── keyword_manager.py # 키워드 관리 모듈
+├── scripts/           # 유틸리티 스크립트
+│   ├── add_keyword.py
+│   ├── fix_existing_posts.py
+│   └── ... (기타 유틸리티)
 ├── config.yaml        # Hugo 설정
 ├── requirements.txt   # Python 의존성
 └── TODO.md            # 할 일 목록
@@ -209,9 +215,9 @@ AIblog/
 - `config.yaml` 문법 확인
 
 ### 마크다운이 포스트 설명에 표시되는 경우
-- `fix_existing_posts.py` 스크립트 실행:
+- `scripts/fix_existing_posts.py` 스크립트 실행:
   ```bash
-  python fix_existing_posts.py
+  python scripts/fix_existing_posts.py
   ```
 - 새 포스트는 자동으로 마크다운이 제거됩니다
 
@@ -225,10 +231,17 @@ AIblog/
 
 ## 🛠️ 유틸리티 스크립트
 
-### fix_existing_posts.py
+### scripts/fix_existing_posts.py
 기존 포스트의 frontmatter에서 마크다운 문법을 제거하는 스크립트:
 ```bash
-python fix_existing_posts.py
+python scripts/fix_existing_posts.py
+```
+
+### scripts/add_keyword.py
+새로운 키워드를 CSV 파일에 추가하는 스크립트:
+```bash
+python scripts/add_keyword.py "키워드" "카테고리" 우선순위
+# 예시: python scripts/add_keyword.py "Python 튜토리얼" 기술 1
 ```
 
 ## 📝 라이선스

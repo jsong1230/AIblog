@@ -2,6 +2,24 @@
 
 ## 2025-12-01
 
+### 프로젝트 폴더 구조 정리
+- **Issue**: 루트 디렉토리에 여러 스크립트 파일이 있어 프로젝트 구조가 복잡함
+- **Solution**: 
+  - 보조 스크립트들을 `scripts/` 폴더로 이동
+  - `add_keyword.py` → `scripts/add_keyword.py`로 이동
+  - `fix_existing_posts.py` → `scripts/fix_existing_posts.py`로 이동
+  - 이동한 스크립트들의 import 경로를 프로젝트 루트 기준으로 수정
+  - `README.md`의 사용법 섹션 업데이트
+- **Files Modified**:
+  - `scripts/add_keyword.py` (이동 및 수정)
+  - `scripts/fix_existing_posts.py` (이동 및 수정)
+  - `README.md`
+- **Files Moved**:
+  - `add_keyword.py` → `scripts/add_keyword.py`
+  - `fix_existing_posts.py` → `scripts/fix_existing_posts.py`
+- **Commits**:
+  - (아직 커밋 전)
+
 ### 하루 포스트 생성 개수 조정
 - **Issue**: 하루에 10개의 포스트를 생성하는 것이 과도함
 - **Solution**: 

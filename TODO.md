@@ -9,6 +9,11 @@
 - [ ] 광고 성과 추적 시스템 구축
 
 ## Done (Recent)
+- [x] 프로젝트 폴더 구조 정리 (2025-12-01)
+    - [x] add_keyword.py → scripts/ 폴더로 이동
+    - [x] fix_existing_posts.py → scripts/ 폴더로 이동
+    - [x] 이동한 스크립트의 import 경로 수정
+    - [x] README.md 사용법 업데이트
 - [x] 하루 포스트 생성 개수 3개로 조정 (2025-12-01)
     - [x] scheduler.py 기본값 10개 → 3개로 변경
     - [x] auto_publish.py 기본값 10개 → 3개로 변경

@@ -67,7 +67,9 @@ def fix_post_frontmatter(filepath):
 
 def main():
     """모든 포스트 파일 처리"""
-    content_dir = Path("content/post")
+    # 프로젝트 루트 기준으로 경로 설정
+    project_root = Path(__file__).parent.parent
+    content_dir = project_root / "content" / "post"
     
     if not content_dir.exists():
         print(f"❌ Directory not found: {content_dir}")
