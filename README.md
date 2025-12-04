@@ -138,8 +138,7 @@ AIblog/
 │   ├── setup/         # 설치 및 설정 가이드
 │   ├── monetization/  # 수익화 가이드
 │   ├── analytics/     # Analytics 설정 가이드
-│   ├── deployment/    # 배포 관련 문서
-│   └── HISTORY.md     # 프로젝트 변경 이력
+│   └── deployment/    # 배포 관련 문서
 ├── .github/
 │   └── workflows/     # GitHub Actions 워크플로우
 ├── generate_post.py   # 포스트 생성 스크립트
@@ -153,7 +152,8 @@ AIblog/
 │   └── ... (기타 유틸리티)
 ├── config.yaml        # Hugo 설정
 ├── requirements.txt   # Python 의존성
-└── TODO.md            # 할 일 목록
+├── TODO.md            # 할 일 목록
+└── HISTORY.md         # 프로젝트 변경 이력
 ```
 
 **문서 인덱스:** [docs/README.md](./docs/README.md)

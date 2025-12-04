@@ -1,96 +1,36 @@
 # Project TODOs
 
 ## In Progress
+
 - [ ] 광고 연동 완료 (AdSense, Amazon, Aliexpress)
 
 ## Backlog
-- [ ] Additional features and improvements
+
 - [ ] 광고 배치 최적화 및 A/B 테스트
 - [ ] 광고 성과 추적 시스템 구축
 
 ## Done (Recent)
-- [x] 프로젝트 폴더 구조 정리 (2025-12-01)
-    - [x] add_keyword.py → scripts/ 폴더로 이동
-    - [x] fix_existing_posts.py → scripts/ 폴더로 이동
-    - [x] 이동한 스크립트의 import 경로 수정
-    - [x] README.md 사용법 업데이트
-- [x] 하루 포스트 생성 개수 3개로 조정 (2025-12-01)
-    - [x] scheduler.py 기본값 10개 → 3개로 변경
-    - [x] auto_publish.py 기본값 10개 → 3개로 변경
-    - [x] env.example 예시 값 10개 → 3개로 변경
-- [x] 포스트 생성 시 날짜를 한국시간(KST) 기준으로 수정 (2025-11-28)
-    - [x] generate_post.py에서 datetime.now()를 get_kst_now()로 변경
-    - [x] 파일명, 타임스탬프, frontmatter 날짜 모두 KST 기준으로 생성
-    - [x] auto_publish.py 커밋 메시지도 KST로 수정
-    - [x] zoneinfo를 사용하여 한국시간대 명시적 설정
-- [x] GitHub Actions 워크플로우 푸시 오류 수정 (2025-11-28)
-    - [x] git push 전 git pull 추가하여 원격 변경사항 먼저 가져오기
-    - [x] 커밋 메시지 날짜를 한국시간(KST)으로 표시하도록 수정
-- [x] 새로운 키워드 200개 추가 (2025-11-28)
-    - [x] 다양한 카테고리로 흥미로운 키워드 197개 생성 및 추가
-    - [x] 기술, AI, 비즈니스, 마케팅, 금융, 생산성, 건강, 교육, 디자인, 블록체인 등 다양한 주제
-    - [x] 키워드 생성 스크립트 작성 (scripts/generate_new_keywords.py)
-    - [x] 총 키워드 수: 342개 → 539개 (미사용 404개)
-- [x] 영어 포스트 태그 통합 (2025-11-26)
-    - [x] 97개 영어 포스트 중 54개 파일의 태그 주제별 통합
-    - [x] 세부 태그를 12개 주제 카테고리로 통합 (AI Automation, Development, Blockchain 등)
-    - [x] 태그 통합 스크립트 작성 (consolidate_english_tags.py)
-- [x] Cursor Rules 업데이트 (2025-11-26)
-    - [x] 커밋 전 필수 작업 규칙 강화 (TODO.md, HISTORY.md, README.md 업데이트 필수)
-    - [x] 날짜 정확 기록 규칙 추가 (YYYY-MM-DD 형식)
-    - [x] 커밋/푸시 전 사용자 승인 필수 규칙 추가
-    - [x] Git 저장소 초기화 규칙 추가 (로컬/원격 저장소 확인)
-- [x] 키워드 바이럴 개선 시스템 구축 (2025-11-23)
-    - [x] 바이럴 키워드 130개 생성 및 병합 (총 342개 키워드)
-    - [x] 키워드 바이럴 변환 스크립트 작성 (convert_to_viral.py)
-    - [x] 키워드 성과 추적 시스템 구축 (keyword_performance_tracker.py)
-    - [x] 키워드 관리 가이드 문서 작성
-- [x] 광고 연동 현황 파악 및 TODO 작성 (2025-11-23)
-    - [x] 현재 광고 시스템 코드 상태 확인
-    - [x] 설정 상태 파악 (AdSense clientId 있음, slotId 없음)
-    - [x] GitHub Secrets 상태 확인 (광고 관련 secrets 없음)
-    - [x] 광고 연동 TODO 및 가이드 문서 작성
 
-## Done
-- [x] Project Setup & Synchronization
-    - [x] Pull latest changes from GitHub
-    - [x] Create TODO.md
-    - [x] Create HISTORY.md
-    - [x] Verify environment consistency
-    - [x] Implement multilingual support (Korean/English)
-- [x] Fix Post Image Display Issue (2025-11-23)
-    - [x] Limited header image height to 400px
-    - [x] Ensured text content visible without scrolling
-- [x] Fix Markdown Rendering in Descriptions (2025-11-23)
-    - [x] Updated `generate_post.py` to strip markdown from descriptions
-    - [x] Created `fix_existing_posts.py` to fix 87 existing posts
-    - [x] Removed duplicate H1 headers from post content
-- [x] Fix Navigation Issues (2025-11-23)
-    - [x] Fixed Korean menu URLs
-    - [x] Fixed English navigation URL structure
-    - [x] Fixed logo links to use correct paths (/AIblog/ and /AIblog/en/)
-- [x] Multilingual Date Format & UI Fixes (2025-11-23)
-    - [x] Fixed logo links for both Korean and English sites
-    - [x] Implemented English ordinal date format (Nov 22nd, 2025)
-    - [x] Removed markdown headers (#) from post summaries
-    - [x] Applied language-specific date formats to all pages (index, categories, tags, single)
-    - [x] Fixed date format detection using $.Language.Lang in range loops
-- [x] Bilingual Posting Setup (2025-11-23)
-    - [x] Modified generate_post() to generate English content directly (not just translate)
-    - [x] Ensured both Korean and English posts are always created
-    - [x] Added fallback to translation if direct English generation fails
-- [x] Mobile Responsive Design Implementation (2025-11-23)
-    - [x] Implemented mobile hamburger menu with toggle button
-    - [x] Optimized post card grid for mobile (single column layout)
-    - [x] Added tablet breakpoint (768px-1024px) with optimized layouts
-    - [x] Added small mobile breakpoint (480px and below) with compact design
-    - [x] Optimized navigation bar for mobile with slide-down menu
-    - [x] Added mobile menu toggle functionality with click-outside-to-close
-    - [x] Optimized typography and spacing for all screen sizes
-- [x] Backlog Tasks Completion (2025-11-23)
-    - [x] Added 32 new keywords to keywords.csv (total: 212 keywords)
-    - [x] Implemented automated testing for post generation (test_generate_post.py)
-    - [x] Added analytics tracking support (Google Analytics & Plausible)
-    - [x] Created analytics partial template
-    - [x] Updated config.yaml with analytics configuration
-    - [x] Updated env.example with analytics settings
+- [x] HISTORY.md를 루트 디렉토리로 이동 (2025-12-01)
+  - [x] docs/HISTORY.md → HISTORY.md로 이동
+  - [x] 관련 문서 링크 업데이트
+- [x] 프로젝트 폴더 구조 정리 (2025-12-01)
+  - [x] add_keyword.py → scripts/ 폴더로 이동
+  - [x] fix_existing_posts.py → scripts/ 폴더로 이동
+  - [x] 이동한 스크립트의 import 경로 수정
+  - [x] README.md 사용법 업데이트
+- [x] 하루 포스트 생성 개수 3개로 조정 (2025-12-01)
+  - [x] scheduler.py 기본값 10개 → 3개로 변경
+  - [x] auto_publish.py 기본값 10개 → 3개로 변경
+  - [x] env.example 예시 값 10개 → 3개로 변경
+- [x] 포스트 생성 시 날짜를 한국시간(KST) 기준으로 수정 (2025-11-28)
+  - [x] generate_post.py에서 datetime.now()를 get_kst_now()로 변경
+  - [x] 파일명, 타임스탬프, frontmatter 날짜 모두 KST 기준으로 생성
+  - [x] auto_publish.py 커밋 메시지도 KST로 수정
+- [x] GitHub Actions 워크플로우 푸시 오류 수정 (2025-11-28)
+  - [x] git push 전 git pull 추가하여 원격 변경사항 먼저 가져오기
+  - [x] 커밋 메시지 날짜를 한국시간(KST)으로 표시하도록 수정
+- [x] 새로운 키워드 200개 추가 (2025-11-28)
+  - [x] 다양한 카테고리로 흥미로운 키워드 197개 생성 및 추가
+  - [x] 키워드 생성 스크립트 작성 (scripts/generate_new_keywords.py)
+  - [x] 총 키워드 수: 342개 → 539개
