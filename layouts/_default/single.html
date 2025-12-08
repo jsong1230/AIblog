@@ -41,7 +41,7 @@
     <footer class="post-footer">
         <div class="tags">
             {{ range .Params.tags }}
-            <a href="{{ (printf "/tags/%s/" (. | urlize)) | relLangURL }}" class="tag">#{{ . }}</a>
+            <a href="{{ (printf "/tags/%s/" (. | urlize)) | absLangURL }}" class="tag">#{{ . }}</a>
             {{ end }}
         </div>
     </footer>
