@@ -1,5 +1,17 @@
 # Project History
 
+## 2025-12-08
+
+### 포스트 태그 링크 경로 수정
+- **Issue**: 포스트 상세 페이지에서 태그를 클릭하면 `https://jsong1230.github.io/tags/...`로 이동하여 404 오류 발생. 올바른 경로는 `https://jsong1230.github.io/AIblog/tags/...`여야 함
+- **Solution**: 
+  - `layouts/_default/single.html`에서 태그 링크 생성 시 `relURL` 대신 `relLangURL` 사용
+  - `relLangURL`은 baseURL과 언어 설정을 올바르게 반영하여 정확한 경로 생성
+- **Files Modified**:
+  - `layouts/_default/single.html`
+- **Commits**:
+  - (아직 커밋 전)
+
 ## 2025-12-01
 
 ### 프로젝트 문서 구조 정리
