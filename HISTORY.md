@@ -5,14 +5,15 @@
 ### 포스트 태그 링크 경로 수정
 - **Issue**: 포스트 상세 페이지에서 태그를 클릭하면 `https://jsong1230.github.io/tags/...`로 이동하여 404 오류 발생. 올바른 경로는 `https://jsong1230.github.io/AIblog/tags/...`여야 함
 - **Solution**: 
-  - `layouts/_default/single.html`에서 태그 링크 생성 시 `relURL` → `relLangURL` → `absLangURL`로 변경
-  - `absLangURL`은 baseURL을 포함한 절대 경로를 생성하여 정확한 경로 보장
-  - 메뉴 링크와 동일한 방식(`absLangURL`) 사용으로 일관성 유지
+  - `layouts/_default/single.html`에서 태그 링크 생성 시 Hugo의 `GetPage` 함수를 사용하여 태그 페이지를 가져옴
+  - 태그 페이지가 존재하면 `.Permalink` 사용, 없으면 `absLangURL`을 fallback으로 사용
+  - 이렇게 하면 Hugo가 자동으로 올바른 baseURL을 포함한 경로를 생성
 - **Files Modified**:
   - `layouts/_default/single.html`
 - **Commits**:
   - `f75a5c6` - "Fix: 포스트 태그 링크 경로 수정" (relLangURL 사용)
-  - (아직 커밋 전) - absLangURL로 재수정
+  - `d2ce1f3` - "Fix: 포스트 태그 링크 경로 수정 (absLangURL 사용)"
+  - (아직 커밋 전) - GetPage와 Permalink 사용으로 최종 수정
 
 ## 2025-12-01
 

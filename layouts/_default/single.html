@@ -41,7 +41,13 @@
     <footer class="post-footer">
         <div class="tags">
             {{ range .Params.tags }}
-            <a href="{{ (printf "/tags/%s/" (. | urlize)) | absLangURL }}" class="tag">#{{ . }}</a>
+            {{ $tag := . | urlize }}
+            {{ $tagPage := $.Site.GetPage (printf "tags/%s" $tag) }}
+            {{ if $tagPage }}
+            <a href="{{ $tagPage.Permalink }}" class="tag">#{{ . }}</a>
+            {{ else }}
+            <a href="{{ (printf "tags/%s/" $tag) | absLangURL }}" class="tag">#{{ . }}</a>
+            {{ end }}
             {{ end }}
         </div>
     </footer>
