@@ -12,7 +12,9 @@
 ## Done (Recent)
 
 - [x] 포스트 태그 링크 경로 수정 (2025-12-08)
-  - [x] single.html에서 태그 링크가 baseURL을 제대로 반영하도록 relLangURL 사용
+  - [x] single.html에서 Hugo의 GetPage 함수를 사용하여 태그 페이지 가져오기
+  - [x] 태그 페이지가 존재하면 Permalink 사용, 없으면 absLangURL fallback
+  - [x] 모든 기존 포스트 재빌드하여 태그 링크 경로 수정 반영
   - [x] 태그 링크가 /AIblog/tags/ 경로로 올바르게 이동하도록 수정
 - [x] HISTORY.md를 루트 디렉토리로 이동 (2025-12-01)
   - [x] docs/HISTORY.md → HISTORY.md로 이동

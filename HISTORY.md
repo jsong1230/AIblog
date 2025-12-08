@@ -8,12 +8,15 @@
   - `layouts/_default/single.html`에서 태그 링크 생성 시 Hugo의 `GetPage` 함수를 사용하여 태그 페이지를 가져옴
   - 태그 페이지가 존재하면 `.Permalink` 사용, 없으면 `absLangURL`을 fallback으로 사용
   - 이렇게 하면 Hugo가 자동으로 올바른 baseURL을 포함한 경로를 생성
+  - 로컬에서 전체 재빌드하여 모든 기존 포스트의 태그 링크가 올바르게 생성됨을 확인
+  - GitHub Actions가 자동으로 빌드하고 배포하여 모든 포스트에 반영됨
 - **Files Modified**:
   - `layouts/_default/single.html`
 - **Commits**:
   - `f75a5c6` - "Fix: 포스트 태그 링크 경로 수정" (relLangURL 사용)
   - `d2ce1f3` - "Fix: 포스트 태그 링크 경로 수정 (absLangURL 사용)"
-  - (아직 커밋 전) - GetPage와 Permalink 사용으로 최종 수정
+  - `201ac10` - "Fix: 포스트 태그 링크 경로 수정 (GetPage 사용)"
+  - `8761d14` - "Docs: HISTORY.md 삭제 (이미 루트로 이동 완료)"
 
 ## 2025-12-01
 
