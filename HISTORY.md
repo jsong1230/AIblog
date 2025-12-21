@@ -1,5 +1,18 @@
 # Project History
 
+## 2025-12-21
+
+### 스케줄 워크플로우 비활성화
+- **Issue**: 매일 자동으로 포스트를 생성하는 스케줄 워크플로우를 일시 중지하고 싶음
+- **Solution**: 
+  - `.github/workflows/schedule.yml`에서 `schedule` 섹션을 주석 처리
+  - `workflow_dispatch`는 유지하여 필요시 수동으로 실행 가능하도록 설정
+  - 자동 스케줄 실행은 중지되지만, GitHub Actions에서 수동으로 실행 가능
+- **Files Modified**:
+  - `.github/workflows/schedule.yml`
+- **Commits**:
+  - (아직 커밋 전)
+
 ## 2025-12-08
 
 ### 포스트 태그 링크 경로 수정

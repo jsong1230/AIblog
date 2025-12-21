@@ -11,6 +11,9 @@
 
 ## Done (Recent)
 
+- [x] 스케줄 워크플로우 비활성화 (2025-12-21)
+  - [x] schedule.yml에서 자동 스케줄 실행 비활성화
+  - [x] workflow_dispatch는 유지하여 수동 실행 가능하도록 설정
 - [x] 포스트 태그 링크 경로 수정 (2025-12-08)
   - [x] single.html에서 Hugo의 GetPage 함수를 사용하여 태그 페이지 가져오기
   - [x] 태그 페이지가 존재하면 Permalink 사용, 없으면 absLangURL fallback
